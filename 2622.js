@@ -167,19 +167,39 @@ losOsosSchema = {
             name: OCCUPATION,
             level: 200,
             features: [
-        //         { 
-        //             name: OCCUPATION_ATHLETE, 
-        //             asset: "assets/species_black.png",
-        //         },
+                { 
+                    type: PFP.ASSET_OPTIONS,
+                    name: OCCUPATION_ATHLETE,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "assets/occupation_athlete1.png", "assets/occupation_athlete2_back.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "assets/occupation_athlete2.png", "assets/occupation_athlete2_back.png" ],
+                        },
+                    ] 
+                },
                 { 
                     type: PFP.ASSET_DUAL,
                     name: OCCUPATION_CREATOR, 
                     assets: [ "assets/occupation_creator.png", "assets/occupation_creator_back.png" ]
                 },
-        //         { 
-        //             name: OCCUPATION_CITIZEN, 
-        //             asset: "assets/species_black.png",
-        //         },
+                { 
+                    type: PFP.ASSET_OPTIONS,
+                    name: OCCUPATION_CITIZEN,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "assets/occupation_citizen1.png", "assets/occupation_citizen1_back.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "assets/occupation_citizen2.png", "assets/occupation_citizen2_back.png" ],
+                        },
+                    ] 
+                },
                 { 
                     type: PFP.ASSET_DUAL,
                     name: OCCUPATION_ENGINEER, 
@@ -212,12 +232,10 @@ losOsosSchema = {
                         {
                             type: PFP.ASSET_DUAL,
                             assets: [ "assets/occupation_fisher1.png", "assets/occupation_fisher1_back.png" ],
-                            chance: 2,
                         },
                         {
                             type: PFP.ASSET_DUAL,
                             assets: [ "assets/occupation_fisher2.png", "assets/occupation_fisher2_back.png" ],
-                            chance: 2,
                         },
                     ] 
                 },

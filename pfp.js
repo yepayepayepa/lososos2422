@@ -23,6 +23,65 @@ class PFPFactory {
         return featurePlan;
     }
 
+    addFeature(pfp, feature, category) {
+
+        switch(feature.type) {
+
+            case undefined:
+            case PFP.ASSET_FRONT:
+                if(feature.asset === undefined && feature.assets === undefined) {
+                    throw "The feature " + feature.name + " must have an asset associated with it.";
+                }
+                if(feature.asset !== undefined) {
+                    pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, feature.level || category.level));
+                }
+                if(typeof feature.assets === "object") {
+                    let currentLevel =  feature.level || category.level;
+                    for (let i = 0; i < feature.assets.length; i++) {
+                        const asset = feature.assets[i];
+                        pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, currentLevel++));
+                    }
+                }
+            break;
+
+            // Do nothing
+            default:
+            case PFP.ASSET_EMPTY:
+            break;
+
+            case PFP.ASSET_BACK:
+                if(feature.asset === undefined) {
+                    throw "The feature " + feature.name + " must have an asset associated with it.";
+                }
+                pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, category.level * -1));
+            break;
+
+            case PFP.ASSET_DUAL:
+                if(feature.assets === undefined) {
+                    throw "The feature " + feature.name + " must have assets associated with it.";
+                }
+                if(feature.assets.length !== 2) {
+                    throw "The feature " + feature.name + " must have two assets associated with it.";
+                }
+                const assetLevel =  feature.level || category.level;
+                const frontAsset = feature.assets[0];
+                pfp.addAsset(new PFPImageAsset(feature.name, frontAsset, this.schema.canvas, assetLevel * 1));
+                const backAsset =  feature.assets[1];
+                pfp.addAsset(new PFPImageAsset(feature.name, backAsset,  this.schema.canvas, assetLevel * -1));
+            break;
+
+            case PFP.ASSET_OPTIONS:
+                if(feature.options === undefined || feature.options.length < 1) {
+                    throw "The feature " + feature.name + " must have options associated with it.";
+                }
+                const choice = pseudorandom.integer(0, feature.options.length - 1);
+                this.addFeature(pfp, { ...feature, ...feature.options[choice]}, category);
+            break;
+
+        }
+
+    }
+
     build(featurePlan) {
         const pfp = new PFP();
         const catKeys = Object.keys(featurePlan);
@@ -34,58 +93,8 @@ class PFPFactory {
 
             for (let j = 0; j < matches.length; j++) {
                 const feature = matches[j];
-                switch(feature.type) {
-
-                    case undefined:
-                    case PFP.ASSET_FRONT:
-                        if(feature.asset === undefined && feature.assets === undefined) {
-                            throw "The feature " + feature.name + " must have an asset associated with it.";
-                        }
-                        if(feature.asset !== undefined) {
-                            pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, feature.level || category.level));
-                        }
-                        if(typeof feature.assets === "object") {
-                            let currentLevel =  feature.level || category.level;
-                            for (let i = 0; i < feature.assets.length; i++) {
-                                const asset = feature.assets[i];
-                                pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, currentLevel++));
-                            }
-                        }
-                    break;
-
-                    // Do nothing
-                    default:
-                    case PFP.ASSET_EMPTY:
-                    break;
-
-                    case PFP.ASSET_BACK:
-                        if(feature.asset === undefined) {
-                            throw "The feature " + feature.name + " must have an asset associated with it.";
-                        }
-                        pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, category.level * -1));
-                    break;
-
-                    case PFP.ASSET_DUAL:
-                        if(feature.assets === undefined) {
-                            throw "The feature " + feature.name + " must have assets associated with it.";
-                        }
-                        if(feature.assets.length !== 2) {
-                            throw "The feature " + feature.name + " must have two assets associated with it.";
-                        }
-                        const assetLevel =  feature.level || category.level;
-                        const frontAsset = feature.assets[0];
-                        pfp.addAsset(new PFPImageAsset(feature.name, frontAsset, this.schema.canvas, assetLevel * 1));
-                        const backAsset =  feature.assets[1];
-                        pfp.addAsset(new PFPImageAsset(feature.name, backAsset,  this.schema.canvas, assetLevel * -1));
-                    break;
-
-                    case PFP.ASSET_MULTIPLE:
-                        if(feature.options === undefined || feature.options.length !== 2) {
-                            throw "The feature " + feature.name + " must have options associated with it.";
-                        }
-
-                    break;
-                }
+                
+                this.addFeature(pfp, feature, category);
             }
         }
         
@@ -136,12 +145,12 @@ class PFPImageAsset {
 
 
 class PFP {
-    static ASSET_EMPTY = 'empty';
-    static ASSET_FRONT = 'front';
-    static ASSET_BACK = 'back';
-    static ASSET_DUAL = 'both';
+    static ASSET_EMPTY = "empty";
+    static ASSET_FRONT = "front";
+    static ASSET_BACK = "back";
+    static ASSET_DUAL = "dual";
 
-    static ASSET_MULTIPLE = 'multiple';
+    static ASSET_OPTIONS = "multiple";
 
     constructor() {
         this.assets = [];

@@ -13,7 +13,7 @@ class PFPFactory {
 
             const options = category.features.reduce((result, current) => {
                 result.picks.push(current.name);
-                result.weights.push(current.chance || 1);
+                result.weights.push(current.chance !== undefined ? current.chance : 1);
                 return result;
             }, { picks: [], weights: [] });
 
@@ -60,14 +60,15 @@ class PFPFactory {
                 if(feature.assets === undefined) {
                     throw "The feature " + feature.name + " must have assets associated with it.";
                 }
-                if(feature.assets.length !== 2) {
+                if(feature.assets.length < 2) {
                     throw "The feature " + feature.name + " must have two assets associated with it.";
                 }
-                const assetLevel =  feature.level || category.level;
-                const frontAsset = feature.assets[0];
-                pfp.addAsset(new PFPImageAsset(feature.name, frontAsset, this.schema.canvas, assetLevel * 1));
-                const backAsset =  feature.assets[1];
-                pfp.addAsset(new PFPImageAsset(feature.name, backAsset,  this.schema.canvas, assetLevel * -1));
+                let assetLevel =  feature.level || category.level;
+                for (let i = 0; i < feature.assets.length; i++) {
+                    const asset = feature.assets[i];
+                    const order = i % 2 ? -1 : 1;
+                    pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, assetLevel++ * order));
+                }
             break;
 
             case PFP.ASSET_OPTIONS:
@@ -128,7 +129,7 @@ class PFPImageAsset {
         }
     }
 
-    draw() {
+    draw(tintColor) {
         const unit = max(this.canvas.width, this.canvas.height);
 
         const wc = (this.asset.width / unit);
@@ -138,8 +139,12 @@ class PFPImageAsset {
 
         const xc = marginx + ((this.asset.x) / unit);
         const yc = marginy + ((this.asset.y) / unit);
-
+        
+        if(this.asset.tinted && tintColor !== undefined) {
+            tint(tintColor);
+        }
         image(this.asset.image, dimensionlessx(xc), dimensionlessy(yc), dimensionless(wc), dimensionless(hc));
+        noTint();
     }
 }
 
@@ -160,9 +165,9 @@ class PFP {
         this.assets.push(asset);
     }
 
-    draw() {
+    draw(tintColor) {
         // When assets are ordered they become layers
         const layers = (this.assets.sort((a, b) => a.level - b.level));
-        layers.forEach(layer => layer.draw());
+        layers.forEach(layer => layer.draw(tintColor));
     }
 }

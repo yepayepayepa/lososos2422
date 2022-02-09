@@ -459,7 +459,6 @@ losOsosSchema = {
                         },
                     ],
                     level: 850,
-                    chance: 10000,
                 },
                 { 
                     type: PFP.ASSET_DUAL,

@@ -24,9 +24,9 @@ function setup() {
 
 function draw() {
     colorMode(RGB)
-    background(239, 235, 217);
+    background("#f0e7d8");
     pfp.draw(tintColor);
-    addGrain(20);
+    addGrain(10);
     fxpreview();
 }
 

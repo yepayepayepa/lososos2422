@@ -1,6 +1,8 @@
+# Los Osos 2422
+
 I was working on the next generative art piece for EmProps when the algorithm became self-aware and tried to escape. I managed to code a containment unit when accidentally I opened a link to a utopic civilization through their existing metaverse. Or should I say "metabears"?
 
-Enter Los Osos 2622. 
+Enter Los Osos 2422. 
 
 Six hundred years into the future, bears live in a peaceful civilization sustained by bamboo and salmon organized in seven districts. Los Osos are black, grizzly, panda, and polar, yet there are no distinctions between species; it's not like they were humans. 
 

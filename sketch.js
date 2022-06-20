@@ -1,6 +1,8 @@
 let pfp;
 let tintColor;
 
+let bgColor; 
+
 function preload() {
     pseudorandom.fxhash();
     const factory = new PFPFactory(losOsosSchema);
@@ -19,14 +21,14 @@ function setup() {
         pseudorandom.integer(0, 100), 
         pseudorandom.integer(0, 75),
         pseudorandom.integer(80, 100));
+    bgColor = pseudorandom.pick(["#f0e7d8", "#e1dbc8", "#ebdeca", "#e5d7bf"]);
     noLoop();
 }
 
 function draw() {
     colorMode(RGB)
-    background("#f0e7d8");
+    background(bgColor);
     pfp.draw(tintColor);
-    addGrain(10);
     fxpreview();
 }
 
@@ -37,7 +39,11 @@ function windowResized() {
 // Saves the artwork as an image when the S key is pressed
 function keyPressed() {
     if (key == 's' || key == 'S') {
-        saveCanvas('lososos2622_' + fxhash.substring(0, 10) + "_", 'png');
+        const DESIRED_SIZE_IN_PIXELS = 1800;
+        resizeCanvas(DESIRED_SIZE_IN_PIXELS / pixelDensity(), DESIRED_SIZE_IN_PIXELS / pixelDensity());
+        saveCanvas('lososos2422_' + fxhash + "_", 'png');
+        windowResized();
+
     }
 }
 

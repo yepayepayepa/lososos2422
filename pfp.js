@@ -23,6 +23,10 @@ class PFPFactory {
         return featurePlan;
     }
 
+    simulate() {
+        console.log("WARNING: THIS IS NOT SUPPOSED TO RUN IN PRODUCTION USE THIS ONLY WHILE DEVELOPING THE PFP");
+    }
+
     addFeature(pfp, feature, category) {
 
         switch(feature.type) {
@@ -75,8 +79,9 @@ class PFPFactory {
                 if(feature.options === undefined || feature.options.length < 1) {
                     throw "The feature " + feature.name + " must have options associated with it.";
                 }
-                const choice = pseudorandom.integer(0, feature.options.length - 1);
-                this.addFeature(pfp, { ...feature, ...feature.options[choice]}, category);
+                const weights = feature.options.map(option => option.chance || 1);
+                
+                this.addFeature(pfp, { ...feature, ...pseudorandom.weightedPick(feature.options, weights)}, category);
             break;
 
         }

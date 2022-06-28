@@ -12,6 +12,9 @@ function preload() {
     window.$fxhashFeatures = featurePlan;
 
     pfp = factory.build(featurePlan);
+
+    // For debug purposes
+    factory.simulate(2422);
 }
 
 function setup() {
@@ -29,6 +32,7 @@ function draw() {
     colorMode(RGB)
     background(bgColor);
     pfp.draw(tintColor);
+
     fxpreview();
 }
 

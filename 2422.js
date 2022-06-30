@@ -28,7 +28,7 @@ const OCCUPATION_FARMER = "Farmer";
 const OCCUPATION_FISHER = "Fisher";
 const OCCUPATION_ATHLETE = "Athlete";
 const OCCUPATION_ARTIST = "Artist";
-const OCCUPATION_CREATOR = "Creator";
+const OCCUPATION_ENGINEER = "Engineer";
 const OCCUPATION_EXPLORER = "Explorer";
 const OCCUPATION_INVESTOR = "Investor";
 const OCCUPATION_CITIZEN = "Collector";
@@ -62,7 +62,6 @@ const MOUTH_SURPRISED = "Surprised";
 const MOUTH_LOLLIPOP = "Lollipop";
 
 
-const HEADWEAR_NONE = "None";
 const HEADWEAR_BLUE_PUNK = "Blue punk";
 const HEADWEAR_PINK_PUNK = "Pink punk";
 const HEADWEAR_PARTY_HAT = "Party hat";
@@ -78,15 +77,15 @@ const HEADWEAR_CROWN = "Crown";
 const HEADWEAR_FISHER_HAT = "Fisher hat";
 const HEADWEAR_CAPTAIN_HAT = "Captain hat";
 const HEADWEAR_RYANS_OWL = "Ryan's owl";
-const HEADWEAR_KARATE_BAND = "Karate band";
-const HEADWEAR_ZANCAN_BAND = "Zancan band";
+const HEADWEAR_KARATE_BAND = "Karate headband";
+const HEADWEAR_ZANCAN_BAND = "Zancan headband";
 const HEADWEAR_BASQUIAT_HAIRDO = "Basquiat hairdo";
 const HEADWEAR_SPACE_HELMET = "Space helmet";
 const HEADWEAR_BEEKEEPER = "Beekeeper";
-const HEADWEAR_YAZID = "Yazid";
+const HEADWEAR_YAZID = "Yazid hairdo";
+const HEADWEAR_PUNEVYR_CAP = "Punevyr cap";
 
 
-const EYEWEAR_NONE = "None";
 const EYEWEAR_GLASSES = "Glasses";
 const EYEWEAR_ANONYMOUS = "Anonymous";
 const EYEWEAR_SUNGLASSES = "Sunglasses";
@@ -96,9 +95,11 @@ const EYEWEAR_SNORKEL = "Snorkel";
 const EYEWEAR_STRIPED_GLASSES = "Striped glasses";
 const EYEWEAR_SPACE_GLASSES = "Space glasses";
 const EYEWEAR_LUCHADOR = "Luchador";
-const EYEWEAR_ORTH = "Orth"
+const EYEWEAR_ORTH = "Lisa Orth glasses"
 const EYEWEAR_3D = "3D glasses"
 const EYEWEAR_HEARTS = "Hearts"
+const EYEWEAR_MAXCAPACITY = "MaxCapacity glasses"
+const EYEWEAR_MONOCLE = "Monocle"
 
 const BLING_NONE = "None";
 const BLING_SILVER = "Silver";
@@ -112,6 +113,7 @@ losOsosSchema = {
         width: 1488,
         height: 1800,
     },
+    tints: ["#20e761", "#e60d0d", "#f5d10a", "#46e3ff", "#ff56c5", "#9a04fc"],
     layers: [
         {
             name: SPECIES,
@@ -250,10 +252,10 @@ losOsosSchema = {
                                 type: PFP.ASSET_DUAL,
                                 assets: [ {
                                     image: "./assets/occupation_citizen1.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen1_back.png",
-                                    tinted: true,
+                                    tint: true,
                                 },{
                                     image: "./assets/occupation_citizen1_bananas.png",
                                     tinted: false,
@@ -263,10 +265,10 @@ losOsosSchema = {
                                 type: PFP.ASSET_DUAL,
                                 assets: [ {
                                     image: "./assets/occupation_citizen1.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen1_back.png",
-                                    tinted: true,
+                                    tint: true,
                                 },{
                                     image: "./assets/occupation_citizen1_smolskullz.png",
                                     tinted: false,
@@ -280,10 +282,10 @@ losOsosSchema = {
                                 type: PFP.ASSET_DUAL,
                                 assets: [ {
                                     image: "./assets/occupation_citizen2.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen2_back.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen2_wgmi.png",
                                     tinted: false,
@@ -292,10 +294,10 @@ losOsosSchema = {
                                 type: PFP.ASSET_DUAL,
                                 assets: [ {
                                     image: "./assets/occupation_citizen2.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen2_back.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen2_rare.png",
                                     tinted: false,
@@ -304,10 +306,10 @@ losOsosSchema = {
                                 type: PFP.ASSET_DUAL,
                                 assets: [ {
                                     image: "./assets/occupation_citizen2.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen2_back.png",
-                                    tinted: true,
+                                    tint: true,
                                 },{
                                     image: "./assets/occupation_citizen2_gm.png",
                                     tinted: false,
@@ -317,10 +319,10 @@ losOsosSchema = {
                                 type: PFP.ASSET_DUAL,
                                 assets: [ {
                                     image: "./assets/occupation_citizen2.png",
-                                    tinted: true,
+                                    tint: true,
                                 }, {
                                     image: "./assets/occupation_citizen2_back.png",
-                                    tinted: true,
+                                    tint: true,
                                 },{
                                     image: "./assets/occupation_citizen2_gn.png",
                                     tinted: false,
@@ -329,27 +331,30 @@ losOsosSchema = {
                         },
                     ] 
                 },
-                { 
-                    type: PFP.ASSET_DUAL,
-                    name: OCCUPATION_CREATOR, 
-                    assets: [ "./assets/occupation_creator_engineer.png", "./assets/occupation_creator_engineer_back.png" ]
+                {
+                    name: OCCUPATION_ENGINEER, 
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_explorer2.png", "./assets/occupation_explorer2_back.png" ]
+                        },
+                        { 
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_creator_engineer.png", "./assets/occupation_creator_engineer_back.png" ]
+                        },
+                    ],
                 },
                 { 
-                    type: PFP.ASSET_OPTIONS,
                     name: OCCUPATION_EXPLORER, 
-                    options: [{
-                        type: PFP.ASSET_DUAL,
-                        assets: [ {
-                            image: "./assets/occupation_explorer.png",
-                            tinted: false,
-                        }, {
-                            image: "./assets/occupation_explorer_back.png",
-                            tinted: false,
-                        } ]
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_explorer.png",
+                        tinted: false,
                     }, {
-                        type: PFP.ASSET_DUAL,
-                        assets: [ "./assets/occupation_explorer2.png", "./assets/occupation_explorer2_back.png" ]
-                    }]
+                        image: "./assets/occupation_explorer_back.png",
+                        tinted: false,
+                    } ]
                 },
                 { 
                     type: PFP.ASSET_OPTIONS,
@@ -402,10 +407,6 @@ losOsosSchema = {
             level: 500,
             features: [
                 { 
-                    type: PFP.ASSET_EMPTY,
-                    name: HEADWEAR_NONE, 
-                },
-                { 
                     type: PFP.ASSET_DUAL,
                     name: HEADWEAR_BEEKEEPER, 
                     assets: [ "./assets/headwear_beekeeper.png", "./assets/headwear_beekeeper_back.png" ],
@@ -416,12 +417,13 @@ losOsosSchema = {
                     type: PFP.ASSET_DUAL,
                     name: HEADWEAR_ENGINEER, 
                     assets: [ "./assets/headwear_engineer.png", "./assets/headwear_engineer_back.png" ],
+                    level: 605,
                 },
                 { 
                     type: PFP.ASSET_DUAL,
                     name: HEADWEAR_KASA, 
                     assets: [ "./assets/headwear_kasa.png", "./assets/headwear_kasa_back.png" ],
-                    level: 395,
+                    level: 603,
                 },
                 {
                     type: PFP.ASSET_OPTIONS,
@@ -435,6 +437,14 @@ losOsosSchema = {
                             type: PFP.ASSET_DUAL,
                             assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome.png" ],
                         },
+                        {
+                            type: PFP.ASSET_FRONT,
+                            asset: "./assets/headwear_clubnft.png",
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/headwear_clubnft.png", "./assets/headwear_artnome.png" ],
+                        },
                     ],
                 },
                 { 
@@ -445,10 +455,15 @@ losOsosSchema = {
                 { 
                     name: HEADWEAR_RYANS_OWL, 
                     asset: "./assets/headwear_ryans_owl.png",
+                    level: 385,
                 },
                 { 
                     name: HEADWEAR_PINK_PUNK, 
                     asset: "./assets/headwear_pink_punk.png",
+                },
+                { 
+                    name: HEADWEAR_PUNEVYR_CAP, 
+                    asset: "./assets/headwear_punevyr_cap.png",
                 },
                 { 
                     name: HEADWEAR_PARTY_HAT, 
@@ -460,11 +475,11 @@ losOsosSchema = {
                     assets: [ 
                         {
                             image: "./assets/headwear_inka_hat.png",
-                            tinted: true,
+                            tint: true,
                         },
                         {
                             image: "./assets/headwear_inka_hat_back.png",
-                            tinted: true,
+                            tint: true,
                         }
                     ]
                 },
@@ -474,7 +489,10 @@ losOsosSchema = {
                 },
                 { 
                     name: HEADWEAR_BEANIE, 
-                    asset: "./assets/headwear_beanie.png",
+                    asset: {
+                        image: "./assets/headwear_beanie.png",
+                        tint: true,
+                    }
                 },
                 { 
                     name: HEADWEAR_CAT_EARS, 
@@ -515,7 +533,7 @@ losOsosSchema = {
                 { 
                     name: HEADWEAR_CAPTAIN_HAT, 
                     asset: "./assets/headwear_captain_hat.png",
-                    level: 805,
+                    level: 605,
                 },
                 { 
                     type: PFP.ASSET_OPTIONS,
@@ -716,6 +734,7 @@ losOsosSchema = {
                 { 
                     name: MOUTH_BAMBOO, 
                     asset: "./assets/mouth_bamboo.png",
+                    level: 505,
                 },
                 { 
                     name: MOUTH_SNORKEL, 
@@ -723,11 +742,19 @@ losOsosSchema = {
                     assets: [ 
                         {
                             image: "./assets/mouth_snorkel.png",
-                            tinted: true,
+                            tint: false,
                         }, 
                         {
                             image: "./assets/mouth_snorkel_back.png",
-                            tinted: true,
+                            tint: false,
+                        },
+                        {
+                            image: "./assets/mouth_snorkel.png",
+                            tint: false,
+                        }, 
+                        {
+                            image: "./assets/mouth_snorkel_color_back.png",
+                            tint: true,
                         },
                     ],                        
                     level: 505,
@@ -738,7 +765,7 @@ losOsosSchema = {
                         "./assets/mouth_record.png",
                         {
                             image: "./assets/mouth_record_label.png",
-                            tinted: true,
+                            tint: true,
                         },
                     ],
                     level: 605,
@@ -775,7 +802,7 @@ losOsosSchema = {
                 { 
                     name: MOUTH_DANGEROUS, 
                     asset: "./assets/mouth_hannibal.png",
-                    level: 395,
+                    level: 384,
                     chance: 0.6,
                 },
             ],
@@ -784,10 +811,6 @@ losOsosSchema = {
             name: EYEWEAR,
             level: 600,
             features: [
-                { 
-                    type: PFP.ASSET_EMPTY,
-                    name: EYEWEAR_NONE, 
-                },
                 { 
                     name: EYEWEAR_GLASSES, 
                     asset: "./assets/eyewear_glasses.png",
@@ -806,6 +829,10 @@ losOsosSchema = {
                     asset: "./assets/eyewear_hearts.png",
                 },
                 { 
+                    name: EYEWEAR_MAXCAPACITY, 
+                    asset: "./assets/eyewear_maxcapacity.png",
+                },
+                { 
                     name: EYEWEAR_3D, 
                     asset: "./assets/eyewear_3d.png",
                 },
@@ -815,34 +842,27 @@ losOsosSchema = {
                 },
                 { 
                     name: EYEWEAR_SNORKEL, 
-                    asset: {
+                    assets: [{
                         image: "./assets/eyewear_snorkel.png",
-                        tinted: true,
-                    },
+                        tint: false,
+                    }, {
+                        image: "./assets/eyewear_snorkel_color.png",
+                        tint: true,
+                    }],
                 },
                 { 
-                    type: PFP.ASSET_OPTIONS,
+                    type: PFP.ASSET_FRONT,
                     name: EYEWEAR_SPACE_GLASSES, 
-                    chance: 0.6,
-                    options: [{
-                            type: PFP.ASSET_FRONT,
-                            asset:  { 
-                                image: "./assets/eyewear_space_glasses.png",
-                                tinted: true,
-                            },
-                        },{
-                            type: PFP.ASSET_FRONT,
-                            asset:  { 
-                                image: "./assets/eyewear_space_glasses.png",
-                                tinted: false,
-                            },
-                        }
-                    ]
-                    
+                    chance: 0.4,
+                    asset:  { 
+                        image: "./assets/eyewear_space_glasses.png",
+                        tint: true,
+                    },                    
                 },
                 {
                     type: PFP.ASSET_OPTIONS,
                     name: EYEWEAR_NINJA_BAND,
+                    level: 604,
                     options: [{
                         type: PFP.ASSET_DUAL,
                         assets: [ "./assets/eyewear_ninja_band_yellow.png", "./assets/eyewear_ninja_band_back_yellow.png" ],
@@ -867,7 +887,7 @@ losOsosSchema = {
                     name: EYEWEAR_STRIPED_GLASSES, 
                     asset: {
                         image: "./assets/eyewear_striped_glasses.png",
-                        tinted: true,
+                        tint: true,
                     },
                 },
                 {
@@ -877,16 +897,22 @@ losOsosSchema = {
                         { 
                             type: PFP.ASSET_FRONT,
                             asset: "./assets/eyewear_luchador.png",
-                            level: 390,
+                            level: 383,
                             chance: 4,
                         },
                         {
                             type: PFP.ASSET_FRONT,
                             asset: "./assets/eyewear_nftbiker.png",
-                            level: 390,
+                            level: 383,
                             chance: 2,
                         },
                     ],
+                },
+                { 
+                    type: PFP.ASSET_DUAL,
+                    name: EYEWEAR_MONOCLE, 
+                    chance: 1000,
+                    assets: [ "./assets/eyewear_monocle.png", "./assets/eyewear_monocle_back.png" ],
                 },
             ],
         },

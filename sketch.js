@@ -14,24 +14,18 @@ function preload() {
     pfp = factory.build(featurePlan);
 
     // For debug purposes
-    factory.simulate(2422);
+    // factory.simulate(2422);
 }
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    colorMode(HSB, 100);
-    tintColor = color(
-        pseudorandom.integer(0, 100), 
-        pseudorandom.integer(0, 75),
-        pseudorandom.integer(80, 100));
     bgColor = pseudorandom.pick(["#f0e7d8", "#e1dbc8", "#ebdeca", "#e5d7bf"]);
     noLoop();
 }
 
 function draw() {
-    colorMode(RGB)
     background(bgColor);
-    pfp.draw(tintColor);
+    pfp.draw();
 
     fxpreview();
 }

@@ -23,12 +23,27 @@ class PFPFactory {
         return featurePlan;
     }
 
-    simulate() {
+    simulate(iterations) {
         console.log("WARNING: THIS IS NOT SUPPOSED TO RUN IN PRODUCTION USE THIS ONLY WHILE DEVELOPING THE PFP");
+
+        for (let i = 0; i < iterations; i++) {
+            const iterationPlan = this.plan();
+            console.log(iterationPlan);
+        }
     }
 
-    addFeature(pfp, feature, category) {
+    defineTintColor(tintAttribute, layerTintColor) {
+        if(typeof tintAttribute === "string") {
+            return color(tintAttribute);
+        } else {
+            if(tintAttribute === true) {
+                return color(layerTintColor);
+            }
+        }
+    }
+    
 
+    addFeature(pfp, feature, category) {
         switch(feature.type) {
 
             case undefined:
@@ -37,13 +52,14 @@ class PFPFactory {
                     throw "The feature " + feature.name + " must have an asset associated with it.";
                 }
                 if(feature.asset !== undefined) {
-                    pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, feature.level || category.level));
-                }
-                if(typeof feature.assets === "object") {
-                    let currentLevel =  feature.level || category.level;
-                    for (let i = 0; i < feature.assets.length; i++) {
-                        const asset = feature.assets[i];
-                        pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, currentLevel++));
+                    pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, feature.level || category.level, this.defineTintColor(feature.asset.tint, feature.tintColor)));
+                } else {
+                    if(typeof feature.assets === "object") {
+                        let currentLevel =  feature.level || category.level;
+                        for (let i = 0; i < feature.assets.length; i++) {
+                            const asset = feature.assets[i];
+                            pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, currentLevel++, this.defineTintColor(asset.tint, feature.tintColor)));
+                        }
                     }
                 }
             break;
@@ -57,7 +73,7 @@ class PFPFactory {
                 if(feature.asset === undefined) {
                     throw "The feature " + feature.name + " must have an asset associated with it.";
                 }
-                pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, category.level * -1));
+                pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, category.level * -1, this.defineTintColor(feature.asset.tint, feature.tintColor)));
             break;
 
             case PFP.ASSET_DUAL:
@@ -71,7 +87,7 @@ class PFPFactory {
                 for (let i = 0; i < feature.assets.length; i++) {
                     const asset = feature.assets[i];
                     const order = i % 2 ? -1 : 1;
-                    pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, assetLevel++ * order));
+                    pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, assetLevel++ * order, this.defineTintColor(asset.tint, feature.tintColor)));
                 }
             break;
 
@@ -83,9 +99,7 @@ class PFPFactory {
                 
                 this.addFeature(pfp, { ...feature, ...pseudorandom.weightedPick(feature.options, weights)}, category);
             break;
-
         }
-
     }
 
     build(featurePlan) {
@@ -99,7 +113,7 @@ class PFPFactory {
 
             for (let j = 0; j < matches.length; j++) {
                 const feature = matches[j];
-                
+                feature.tintColor = pseudorandom.pick(this.schema.tints);
                 this.addFeature(pfp, feature, category);
             }
         }
@@ -109,7 +123,7 @@ class PFPFactory {
 }
 
 class PFPImageAsset {
-    constructor(name, asset, canvas, level) {
+    constructor(name, asset, canvas, level, tintColor) {
         this.name = name;
         this.level = level;
         this.canvas = canvas;
@@ -120,6 +134,7 @@ class PFPImageAsset {
                 y: 0,
                 ...canvas,
                 image: loadImage(asset),
+                tintColor
             }
         }
 
@@ -130,11 +145,12 @@ class PFPImageAsset {
                 ...canvas,
                 ...asset,
                 image: loadImage(asset.image),
+                tintColor
             }
         }
     }
 
-    draw(tintColor) {
+    draw() {
         const unit = max(this.canvas.width, this.canvas.height);
 
         const wc = (this.asset.width / unit);
@@ -145,8 +161,8 @@ class PFPImageAsset {
         const xc = marginx + ((this.asset.x) / unit);
         const yc = marginy + ((this.asset.y) / unit);
         
-        if(this.asset.tinted && tintColor !== undefined) {
-            tint(tintColor);
+        if(this.asset.tintColor !== undefined) {
+            tint(this.asset.tintColor);
         }
         image(this.asset.image, dimensionlessx(xc), dimensionlessy(yc), dimensionless(wc), dimensionless(hc));
         noTint();
@@ -170,9 +186,9 @@ class PFP {
         this.assets.push(asset);
     }
 
-    draw(tintColor) {
+    draw() {
         // When assets are ordered they become layers
         const layers = (this.assets.sort((a, b) => a.level - b.level));
-        layers.forEach(layer => layer.draw(tintColor));
+        layers.forEach(layer => layer.draw());
     }
 }

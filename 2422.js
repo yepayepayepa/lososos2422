@@ -29,7 +29,7 @@ losOsosSchema = {
             ]
         },
         {
-            name: "Region",
+            name: "District",
             level: -1000,
             features: [
                 {
@@ -37,11 +37,11 @@ losOsosSchema = {
                     assets: ["./assets/district_blue.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Forest", 
+                    name: "Forests", 
                     assets: ["./assets/district_green.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "City",   
+                    name: "Caves",   
                     assets: ["./assets/district_red.png", "./assets/district_texture.png"],
                 },
                 {
@@ -53,7 +53,7 @@ losOsosSchema = {
                     assets: ["./assets/district_black.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Caves",   
+                    name: "City",   
                     assets: ["./assets/district_purple.png", "./assets/district_texture.png"],
                 },
                 {
@@ -344,21 +344,25 @@ losOsosSchema = {
                     name: "RIGHT CLICK SAVE headband", 
                     type: PFP.ASSET_FRONT,
                     asset: "./assets/headwear_rcs.png",
+                    chance: 0.25,
                 },
                 {
                     name: "RIGHT CLICK SAVE Artnome headband", 
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome.png" ],
+                    chance: 0.25,
                 },
                 {
                     name: "ClubNFT headband", 
                     type: PFP.ASSET_FRONT,
                     asset: "./assets/headwear_clubnft.png",
+                    chance: 0.25,
                 },
                 {
                     name: "ClubNFT Artnome headband", 
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/headwear_clubnft.png", "./assets/headwear_artnome.png" ],
+                    chance: 0.25,
                 },
                 { 
                     name: "Spiky punk", 

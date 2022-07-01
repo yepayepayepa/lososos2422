@@ -3,7 +3,7 @@ class PFPFactory {
         this.schema = schema;
     }
 
-    plan() {
+    plan(debug) {
         const featurePlan = {};
 
         const layers = this.schema.layers;
@@ -20,17 +20,14 @@ class PFPFactory {
             featurePlan[category.name] = pseudorandom.weightedPick(options.picks, options.weights);
         }
 
+        if (debug) {
+            console.log(JSON.stringify(featurePlan, null, 4));
+            window.$fxhashFeatures = featurePlan;    
+        }
+
         return featurePlan;
     }
 
-    simulate(iterations) {
-        console.log("WARNING: THIS IS NOT SUPPOSED TO RUN IN PRODUCTION USE THIS ONLY WHILE DEVELOPING THE PFP");
-
-        for (let i = 0; i < iterations; i++) {
-            const iterationPlan = this.plan();
-            console.log(iterationPlan);
-        }
-    }
 
     defineTintColor(tintAttribute, layerTintColor) {
         if(typeof tintAttribute === "string") {
@@ -102,8 +99,13 @@ class PFPFactory {
         }
     }
 
-    build(featurePlan) {
+    build(debug) {
         const pfp = new PFP();
+
+        const featurePlan = this.plan(debug);
+
+        pfp.backgroundColor = pseudorandom.pick(this.schema.backgrounds);
+
         const catKeys = Object.keys(featurePlan);
         for (let i = 0; i < catKeys.length; i++) {
             const catName = catKeys[i];
@@ -117,6 +119,13 @@ class PFPFactory {
                 this.addFeature(pfp, feature, category);
             }
         }
+
+        pfp.simulate = (iterations) => {    
+            for (let i = 0; i < iterations; i++) {
+                const iterationPlan = this.plan();
+                console.log(iterationPlan);
+            }
+        };
         
         return pfp;
     }
@@ -187,6 +196,8 @@ class PFP {
     }
 
     draw() {
+        background(pfp.backgroundColor);
+
         // When assets are ordered they become layers
         const layers = (this.assets.sort((a, b) => a.level - b.level));
         layers.forEach(layer => layer.draw());

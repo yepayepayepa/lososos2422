@@ -33,42 +33,42 @@ losOsosSchema = {
             level: -1000,
             features: [
                 {
-                    name: "Riverlands",   
+                    name: "Blue",   
                     assets: ["./assets/district_blue.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Forests", 
+                    name: "Green", 
                     assets: ["./assets/district_green.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Caves",   
+                    name: "Red",   
                     assets: ["./assets/district_red.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Mountains",   
+                    name: "Yellow",   
                     assets: ["./assets/district_yellow.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Space",   
+                    name: "Black",   
                     assets: ["./assets/district_black.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "City",   
+                    name: "Purple",   
                     assets: ["./assets/district_purple.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Tundra",   
+                    name: "White",   
                     assets: ["./assets/district_gray.png", "./assets/district_texture.png"],
                 }
             ]
         },
         {    
-            name: "Occupation",
+            name: "Outfit",
             level: 200,
             features: [
                 { 
+                    name: "Luchador singlet",
                     type: PFP.ASSET_OPTIONS,
-                    name: "Luchador",
                     options: [
                         {
                             type: PFP.ASSET_DUAL,
@@ -80,23 +80,19 @@ losOsosSchema = {
                         },
                     ] 
                 },
-                { 
-                    type: PFP.ASSET_OPTIONS,
-                    name: "Athlete",
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_racer.png", "./assets/occupation_racer_back.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_mufc.png", "./assets/occupation_mufc_back.png" ],
-                        },
-                    ],
+                {
+                    name: "Car racer",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_racer.png", "./assets/occupation_racer_back.png" ],
                 },
-                { 
+                {
+                    name: "Football player",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_mufc.png", "./assets/occupation_mufc_back.png" ],
+                },
+                {
+                    name: "William Mapan hoodie",
                     type: PFP.ASSET_OPTIONS,
-                    name: "Artist", 
                     options: [
                         {
                             type: PFP.ASSET_DUAL,
@@ -106,79 +102,21 @@ losOsosSchema = {
                             type: PFP.ASSET_DUAL,
                             assets: [ "./assets/occupation_creator_mapan.png", "./assets/occupation_creator_mapan_back.png", "./assets/occupation_creator_mapan_top.png" ],
                         },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
-                        },
-                    ],
-                },
-                { 
-                    type: PFP.ASSET_OPTIONS,
-                    name: "Collector",
-                    options: [
-                        // Banana shirt
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ {
-                                image: "./assets/occupation_citizen1.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_citizen1_back.png",
-                                tint: true,
-                            },{
-                                image: "./assets/occupation_citizen1_bananas.png",
-                                tinted: false,
-                            } ],
-                        },
-                        // SMOLSKULLs shirt
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ {
-                                image: "./assets/occupation_citizen1.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_citizen1_back.png",
-                                tint: true,
-                            },{
-                                image: "./assets/occupation_citizen1_smolskullz.png",
-                                tinted: false,
-                            } ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_fxhash.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_andreasgysin.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_thehillside.png" ],
-                        },
-                    ] 
+                    ]
                 },
                 {
-                    type: PFP.ASSET_OPTIONS,
-                    name: "Engineer", 
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_explorer2.png", "./assets/occupation_explorer2_back.png" ]
-                        },
-                        { 
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_creator_engineer.png", "./assets/occupation_creator_engineer_back.png" ]
-                        },
-                    ],
+                    name: "Yazid's brand",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
                 },
                 { 
+                    name: "Developer",
                     type: PFP.ASSET_DUAL,
-                    name: "Explorer", 
+                    assets: [ "./assets/occupation_creator_engineer.png", "./assets/occupation_creator_engineer_back.png" ]
+                },
+                { 
+                    name: "Explorer",
+                    type: PFP.ASSET_DUAL,
                     assets: [ {
                         image: "./assets/occupation_explorer.png",
                         tinted: false,
@@ -187,101 +125,136 @@ losOsosSchema = {
                         tinted: false,
                     } ]
                 },
-                { 
-                    type: PFP.ASSET_OPTIONS,
+                {
                     name: "Farmer",
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_farmer1.png", "./assets/occupation_farmer1_back.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_farmer2.png", "./assets/occupation_farmer2_back.png" ],
-                            level: 860,
-                        },
-                    ] 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_farmer1.png", "./assets/occupation_farmer1_back.png" ],
+                },
+                {
+                    name: "American Gothic Farmer",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_farmer2.png", "./assets/occupation_farmer2_back.png" ],
+                    level: 860,
                 },
                 { 
                     type: PFP.ASSET_DUAL,
-                    name: "Scammer", 
+                    name: "Felon", 
                     assets: [ "./assets/occupation_felon.png", "./assets/occupation_felon_back.png" ],
-                    chance: 0.05,
-                },
-                { 
-                    type: PFP.ASSET_OPTIONS,
-                    name: "Fisher",
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_fisher1.png", "./assets/occupation_fisher1_back.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_fisher2.png", "./assets/occupation_fisher2_back.png" ],
-                        },
-                    ] 
+                    chance: 0.6,
                 },
                 {
-                    type: PFP.ASSET_OPTIONS, 
-                    name: "Investor", 
-                    options: [ 
-                        { 
-                            type: PFP.ASSET_DUAL,
-                            chance: 3,
-                            assets: [ "./assets/occupation_investor.png", "./assets/occupation_investor_back.png" ]
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ {
-                                image: "./assets/occupation_investor_hoodie.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_investor_hoodie_back.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_investor_hoodie_wgmi.png",
-                                tinted: false,
-                            } ],
-                        },{
-                            type: PFP.ASSET_DUAL,
-                            assets: [ {
-                                image: "./assets/occupation_investor_hoodie.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_investor_hoodie_back.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_investor_hoodie_rare.png",
-                                tinted: false,
-                            } ],
-                        },{
-                            type: PFP.ASSET_DUAL,
-                            assets: [ {
-                                image: "./assets/occupation_investor_hoodie.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_investor_hoodie_back.png",
-                                tint: true,
-                            },{
-                                image: "./assets/occupation_investor_hoodie_gm.png",
-                                tinted: false,
-                            } ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ {
-                                image: "./assets/occupation_investor_hoodie.png",
-                                tint: true,
-                            }, {
-                                image: "./assets/occupation_investor_hoodie_back.png",
-                                tint: true,
-                            },{
-                                image: "./assets/occupation_investor_hoodie_gn.png",
-                                tinted: false,
-                            } ],
-                        }
-                    ],                            
+                    name: "Fisher",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_fisher1.png", "./assets/occupation_fisher1_back.png" ],
+                },
+                {   
+                    name: "Nordic sweater fisher",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_fisher2.png", "./assets/occupation_fisher2_back.png" ],
+                },
+                { 
+                    name: "Investor",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_investor.png", "./assets/occupation_investor_back.png" ],
+                    chance: 0.5,
+                },
+                {
+                    name: "Banana shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_citizen1.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_citizen1_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_citizen1_bananas.png",
+                        tinted: false,
+                    } ],
+                },
+                {
+                    type: PFP.ASSET_DUAL,
+                    chance: 0.9,
+                    name: "SMOLSKULLs shirt",
+                    assets: [ {
+                        image: "./assets/occupation_citizen1.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_citizen1_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_citizen1_smolskullz.png",
+                        tinted: false,
+                    } ],
+                },
+                {
+                    name: "Nirvana t-shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
+                },
+                {
+                    name: "fx(hash) t-shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_fxhash.png" ],
+                },
+                {
+                    name: "The Hill-side t-shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_thehillside.png" ],
+                },
+                {
+                    name: "wgmi hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_wgmi.png",
+                        tinted: false,
+                    } ],
+                },{
+                    name: "rare hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_rare.png",
+                        tinted: false,
+                    } ],
+                },{
+                    name: "gm hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_investor_hoodie_gm.png",
+                        tinted: false,
+                    } ],
+                },
+                {
+                    name: "gn hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_investor_hoodie_gn.png",
+                        tinted: false,
+                    } ],
                 },
                 { 
                     type: PFP.ASSET_DUAL,
@@ -326,6 +299,12 @@ losOsosSchema = {
                     assets: [ "./assets/headwear_kasa.png", "./assets/headwear_kasa_back.png" ],
                     level: 603,
                 },
+                { 
+                    type: PFP.ASSET_DUAL,
+                    name: "Top hat", 
+                    assets: [ "./assets/headwear_top_hat.png", "./assets/headwear_top_hat_back.png" ],
+                    level: 605,
+                },
                 {
                     name: "RCS headband", 
                     type: PFP.ASSET_OPTIONS,
@@ -339,6 +318,11 @@ losOsosSchema = {
                             assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome.png" ],
                         },
                     ]
+                },
+                {
+                    name: "Arab hat", 
+                    type: PFP.ASSET_DUAL,
+                    assets: ["./assets/headwear_arab_hat.png", "./assets/headwear_arab_hat_back.png"],
                 },
                 {
                     name: "RIGHT CLICK SAVE headband", 
@@ -357,6 +341,14 @@ losOsosSchema = {
                     type: PFP.ASSET_FRONT,
                     asset: "./assets/headwear_clubnft.png",
                     chance: 0.25,
+                },
+                {
+                    name: "Hipster hat", 
+                    type: PFP.ASSET_FRONT,
+                    asset: {
+                        image: "./assets/headwear_hipster_hat.png",
+                        tint: true,
+                    },
                 },
                 {
                     name: "ClubNFT Artnome headband", 
@@ -395,7 +387,6 @@ losOsosSchema = {
                         },
                         {
                             type: PFP.ASSET_FRONT,
-                            chance: 1000,
                             asset: {
                                 image: "./assets/headwear_pink_punk.png",
                                 tint: "#9a04fc",
@@ -665,8 +656,14 @@ losOsosSchema = {
                     level: 380,
                 },
                 { 
+                    name: "Mustache", 
+                    asset: "./assets/mouth_mustache.png",
+                    level: 380,
+                },
+                { 
                     name: "Lollipop", 
                     asset: "./assets/mouth_lollipop.png",
+                    level: 380,
                 },
                 { 
                     name: "Eating berries", 
@@ -745,7 +742,7 @@ losOsosSchema = {
                     name: "Dangerous", 
                     asset: "./assets/mouth_hannibal.png",
                     level: 384,
-                    chance: 0.6,
+                    chance: 0.3,
                 },
             ],
         },
@@ -756,6 +753,10 @@ losOsosSchema = {
                 { 
                     name: "Glasses", 
                     asset: "./assets/eyewear_glasses.png",
+                },
+                { 
+                    name: "Aviator glasses", 
+                    asset: "./assets/eyewear_aviator_glasses.png",
                 },
                 { 
                     name: "Anonymous", 

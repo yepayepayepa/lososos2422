@@ -507,7 +507,6 @@ losOsosSchema = {
                 {
                     type: PFP.ASSET_OPTIONS,
                     name: "Luchador mask", 
-                    chance: 1000,
                     options: [
                         { 
                             type: PFP.ASSET_FRONT,

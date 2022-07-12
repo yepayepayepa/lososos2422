@@ -32,6 +32,8 @@ class PFPFactory {
     defineTintColor(tintAttribute, layerTintColor) {
         if(typeof tintAttribute === "string") {
             return color(tintAttribute);
+        } else if (Array.isArray(tintAttribute)) {
+            return color(pseudorandom.pick(tintAttribute));
         } else {
             if(tintAttribute === true) {
                 return color(layerTintColor);

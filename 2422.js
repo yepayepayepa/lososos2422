@@ -7,28 +7,6 @@ losOsosSchema = {
     tints: ["#3fb033", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc"],
     layers: [
         {
-            name: "Species",
-            level: 0,
-            features: [
-                { 
-                    name: "Black",   
-                    asset: "./assets/species_black.png",
-                },
-                { 
-                    name: "Grizzly", 
-                    asset: "./assets/species_grizzly.png",
-                },
-                { 
-                    name: "Panda",   
-                    asset: "./assets/species_panda.png",
-                },
-                { 
-                    name: "Polar",   
-                    asset: "./assets/species_polar.png",
-                },
-            ]
-        },
-        {
             name: "District",
             level: -1000,
             features: [
@@ -62,583 +40,31 @@ losOsosSchema = {
                 }
             ]
         },
-        {    
-            name: "Outfit",
-            level: 200,
+        {
+            name: "Species",
+            level: 0,
             features: [
                 { 
-                    name: "Singlet",
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ 
-                                "./assets/occupation_luchador1.png",
-                                "./assets/occupation_luchador2_back.png",
-                            ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ 
-                                {
-                                    image: "./assets/occupation_luchador1.png",
-                                    tint: "#46e3ff",
-                                },
-                                {
-                                    image: "./assets/occupation_luchador2_back.png",
-                                    tint: "#46e3ff",
-                                },
-                            ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ 
-                                {
-                                    image: "./assets/occupation_luchador1.png",
-                                    tint: "#f5d10a",
-                                },
-                                {
-                                    image: "./assets/occupation_luchador2_back.png",
-                                    tint: "#f5d10a",
-                                },
-                            ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_luchador2.png", "./assets/occupation_luchador2_back.png" ],
-                        },
-                    ] 
-                },
-                {
-                    name: "Bearstappen",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_racer.png", "./assets/occupation_racer_back.png" ],
-                },
-                {
-                    name: "Football player",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_mufc.png", "./assets/occupation_mufc_back.png" ],
-                },
-                {
-                    name: "William Mapan hoodie",
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_creator_mapan.png", "./assets/occupation_creator_mapan_back.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_creator_mapan.png", "./assets/occupation_creator_mapan_back.png", "./assets/occupation_creator_mapan_top.png" ],
-                        },
-                    ]
-                },
-                {
-                    name: "Yazid's brand",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
+                    name: "Black",   
+                    asset: "./assets/species_black.png",
                 },
                 { 
-                    name: "Developer",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_creator_engineer.png", "./assets/occupation_creator_engineer_back.png" ]
+                    name: "Grizzly", 
+                    asset: "./assets/species_grizzly.png",
                 },
                 { 
-                    name: "Explorer",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_explorer.png",
-                        tinted: false,
-                    }, {
-                        image: "./assets/occupation_explorer_back.png",
-                        tinted: false,
-                    } ]
+                    name: "Panda",   
+                    asset: "./assets/species_panda.png",
                 },
                 { 
-                    name: "Emmet Brown",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_emmet_brown.png",
-                        tinted: false,
-                    }, {
-                        image: "./assets/occupation_emmet_brown_back.png",
-                        tinted: false,
-                    } ]
+                    name: "Polar",   
+                    asset: "./assets/species_polar.png",
                 },
-                {
-                    name: "Farmer",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_farmer1.png", "./assets/occupation_farmer1_back.png" ],
-                },
-                {
-                    name: "American Gothic farmer",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_farmer2.png", "./assets/occupation_farmer2_back.png" ],
-                    level: 860,
-                },
-                { 
-                    name: "Inmate", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_felon.png", "./assets/occupation_felon_back.png" ],
-                    chance: 0.6,
-                },
-                {
-                    name: "Fisher",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_fisher1.png", "./assets/occupation_fisher1_back.png" ],
-                },
-                {   
-                    name: "Nordic sweater fisher",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_fisher2.png", "./assets/occupation_fisher2_back.png" ],
-                },
-                { 
-                    name: "Bathrobe",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_investor.png", "./assets/occupation_investor_back.png" ],
-                    chance: 0.5,
-                },
-                {
-                    name: "Shirt",
-                    type: PFP.ASSET_DUAL,
-                    chance: 0.7,
-                    assets: [ {
-                        image: "./assets/occupation_citizen1_for_tinting.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_citizen1_back.png",
-                        tint: true,
-                    },
-                    {
-                        image: "./assets/occupation_citizen1_buttons.png",
-                        tint: false,
-                    }
-                    ],
-                },
-                {
-                    name: "Banana shirt",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_citizen1_for_tinting.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_citizen1_back.png",
-                        tint: true,
-                    },{
-                        image: "./assets/occupation_citizen1_bananas.png",
-                        tinted: false,
-                    } ],
-                },
-                {
-                    type: PFP.ASSET_DUAL,
-                    chance: 0.9,
-                    name: "SMOLSKULLs shirt",
-                    assets: [ {
-                        image: "./assets/occupation_citizen1_for_tinting.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_citizen1_back.png",
-                        tint: true,
-                    },{
-                        image: "./assets/occupation_citizen1_smolskullz.png",
-                        tinted: false,
-                    } ],
-                },
-                {
-                    name: "ertdfgcvb shirt",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_andreasgysin.png" ],
-                },
-                {
-                    name: "Glomularus",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_glomularus.png", "./assets/occupation_glomularus_back.png" ],
-                },
-                {
-                    name: "Nirvana shirt",
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
-                        },
-                    ]
-                },
-                {
-                    name: "Art Basel shirt",
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_art_basel.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_art_basel.png" ],
-                        },
-                    ]
-                },
-                {
-                    name: "Casual",
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ { image: "./assets/occupation_tshirt_white.png", tint: true }, "./assets/occupation_creator_back.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ { image: "./assets/occupation_tshirt_white_long_sleeve.png", tint: true }, "./assets/occupation_creator_back.png" ],
-                        },
-                    ],
-                    chance: 0.2,
-                },
-                {
-                    name: "fx(hash) shirt",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_fxhash.png" ],
-                    chance: 1.2,
-                },
-                {
-                    name: "The Hill-side shirt",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_thehillside.png" ],
-                },
-                {
-                    name: "WGMI hoodie",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_investor_hoodie.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_investor_hoodie_back.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_investor_hoodie_wgmi.png",
-                        tinted: false,
-                    } ],
-                },{
-                    name: "Rare hoodie",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_investor_hoodie.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_investor_hoodie_back.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_investor_hoodie_rare.png",
-                        tinted: false,
-                    } ],
-                },{
-                    name: "GM hoodie",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_investor_hoodie.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_investor_hoodie_back.png",
-                        tint: true,
-                    },{
-                        image: "./assets/occupation_investor_hoodie_gm.png",
-                        tinted: false,
-                    } ],
-                },
-                {
-                    name: "GN hoodie",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_investor_hoodie.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_investor_hoodie_back.png",
-                        tint: true,
-                    },{
-                        image: "./assets/occupation_investor_hoodie_gn.png",
-                        tinted: false,
-                    } ],
-                },
-                { 
-                    name: "Ninja", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_ninja.png", "./assets/occupation_ninja_back.png" ]
-                },
-            ],
-        },
-        {    
-            name: "Headwear",
-            level: 615,
-            features: [
-                { 
-                    name: "Noya hat",
-                    type: PFP.ASSET_FRONT,
-                    assets: [
-                        {
-                            image: "./assets/headwear_hat_cap.png",
-                            tint: true,
-                        },
-                        {
-                            image: "./assets/headwear_hat_visor.png",
-                            tint: true,
-                        },
-                        {
-                            image: "./assets/headwear_hat_noya.png",
-                            tint: false,
-                        },
-                    ],
-                },
-                { 
-                    name: "Nudoru hat",
-                    type: PFP.ASSET_FRONT,
-                    chance: 0.6,
-                    level: 605,
-                    assets: [
-                        {
-                            image: "./assets/headwear_hat_cap.png",
-                            tint: ["#ed9ff6", "#f26f7d"],
-                        },
-                        {
-                            image: "./assets/headwear_hat_nudoru.png",
-                            tint: false,
-                        },
-                        {
-                            image: "./assets/headwear_hat_visor.png",
-                            tint: ["#d965e7", "#f26f7d", "#b1ef63"],
-                        },
-                    ],
-                },
-                { 
-                    name: "Beekeeper", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_beekeeper.png", "./assets/headwear_beekeeper_back.png" ],
-                    chance: 0.6,
-                    level: 815,
-                },
-                {
-                    name: "Tupac bandana", 
-                    type: PFP.ASSET_FRONT,
-                    asset: "./assets/headwear_tupac_bandana.png",
-                },
-                { 
-                    name: "Hard top", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_engineer.png", "./assets/headwear_engineer_back.png" ],
-                    level: 615,
-                },
-                { 
-                    name: "Kasa", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_kasa.png", "./assets/headwear_kasa_back.png" ],
-                    level: 615,
-                },
-                { 
-                    name: "Top hat", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_top_hat.png", "./assets/headwear_top_hat_back.png" ],
-                    level: 615,
-                },
-                {
-                    name: "RCS headband", 
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_FRONT,
-                            asset: "./assets/headwear_rcs.png",
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome.png" ],
-                        },
-                    ]
-                },
-                {
-                    name: "Arab hat", 
-                    type: PFP.ASSET_DUAL,
-                    assets: ["./assets/headwear_arab_hat.png", "./assets/headwear_arab_hat_back.png"],
-                },
-                {
-                    name: "RIGHT CLICK SAVE headband", 
-                    type: PFP.ASSET_FRONT,
-                    asset: "./assets/headwear_rcs.png",
-                    chance: 0.25,
-                },
-                {
-                    name: "RIGHT CLICK SAVE Artnome headband", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome.png" ],
-                    chance: 0.25,
-                },
-                {
-                    name: "ClubNFT headband", 
-                    type: PFP.ASSET_FRONT,
-                    asset: "./assets/headwear_clubnft.png",
-                    chance: 0.25,
-                },
-                {
-                    name: "Hipster hat", 
-                    type: PFP.ASSET_FRONT,
-                    asset: {
-                        image: "./assets/headwear_hipster_hat.png",
-                        tint: true,
-                    },
-                },
-                {
-                    name: "ClubNFT Artnome headband", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_clubnft.png", "./assets/headwear_artnome.png" ],
-                    chance: 0.25,
-                },
-                { 
-                    name: "Spiky punk", 
-                    asset: {
-                        image: "./assets/headwear_blue_punk.png",
-                        tint: true,
-                    },
-                    chance: 0.5,
-                },
-                { 
-                    name: "Ryan Bell's Moonbird", 
-                    asset: "./assets/headwear_ryans_owl.png",
-                    level: 615,
-                },
-                { 
-                    name: "Mohawk punk", 
-                    type: PFP.ASSET_OPTIONS,
-                    chance: 0.7,
-                    options: [
-                        {
-                            type: PFP.ASSET_FRONT,
-                            asset: "./assets/headwear_pink_punk.png",
-                        },
-                        {
-                            type: PFP.ASSET_FRONT,
-                            asset: {
-                                image: "./assets/headwear_pink_punk.png",
-                                tint: "#f5d10a",
-                            }
-                        },
-                        {
-                            type: PFP.ASSET_FRONT,
-                            asset: {
-                                image: "./assets/headwear_pink_punk.png",
-                                tint: "#9a04fc",
-                            }
-                        },
-                    ]
-                },
-                { 
-                    name: "Punevyr's cap", 
-                    asset: "./assets/headwear_punevyr_cap.png",
-                    chance: 0.5,
-                },
-                { 
-                    name: "Party hat", 
-                    asset: "./assets/headwear_party_hat.png",
-                },
-                { 
-                    type: PFP.ASSET_DUAL,
-                    name: "Inka hat", 
-                    assets: [ 
-                        {
-                            image: "./assets/headwear_inka_hat.png",
-                            tint: true,
-                        },
-                        {
-                            image: "./assets/headwear_inka_hat_back.png",
-                            tint: true,
-                        }
-                    ]
-                },
-                { 
-                    name: "Swimming cap", 
-                    asset: "./assets/headwear_swimming_cap.png",
-                },
-                { 
-                    name: "Beanie", 
-                    asset: {
-                        image: "./assets/headwear_beanie.png",
-                        tint: true,
-                    }
-                },
-                { 
-                    name: "Cat ears", 
-                    asset: "./assets/headwear_cat_ears.png",
-                },
-                { 
-                    name: "Bunny ears", 
-                    asset: "./assets/headwear_bunny_ears.png",
-                },
-                { 
-                    name: "Karate headband", 
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_karate_band.png", "./assets/headwear_karate_band_back.png" ],
-                },
-                { 
-                    name: "Zancan headband", 
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: ["./assets/headwear_zancan_band.png", "./assets/headwear_zancan_band_back.png"],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: ["./assets/headwear_zancan_green_band.png", "./assets/headwear_zancan_green_band_back.png"],
-                        }
-                    ]
-                },
-                { 
-                    name: "Crown", 
-                    asset: "./assets/headwear_crown.png",
-                },
-                { 
-                    name: "Fisher hat",
-                    type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/headwear_fisher_hat.png", "./assets/headwear_fisher_hat_back.png" ],
-                },
-                { 
-                    name: "Captain hat", 
-                    asset: "./assets/headwear_captain_hat.png",
-                    level: 615,
-                },
-                { 
-                    type: PFP.ASSET_OPTIONS,
-                    name: "Space helmet", 
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/headwear_space_helmet_golden.png", "./assets/headwear_space_helmet_back.png", "./assets/headwear_space_helmet_cover.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/headwear_space_helmet_red_dot.png", "./assets/headwear_space_helmet_back.png", "./assets/headwear_space_helmet_cover.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/headwear_space_helmet_green.png", "./assets/headwear_space_helmet_back.png", "./assets/headwear_space_helmet_cover.png" ],
-                        },
-                    ],
-                    level: 850,
-                },
-                { 
-                    type: PFP.ASSET_BACK,
-                    name: "Basquiat's hairdo", 
-                    asset: "./assets/headwear_basquiat_hairdo.png",
-                },
-                { 
-                    type: PFP.ASSET_DUAL,
-                    name: "Yazid's hairdo", 
-                    assets: [ "./assets/headwear_yazid.png", "./assets/headwear_yazid_back.png" ],
-                },
-            ],
+            ]
         },
         {    
             name: "Eyes",
-            level: 300,
+            level: 100,
             features: [
                 { 
                     type: PFP.ASSET_OPTIONS,
@@ -769,8 +195,591 @@ losOsosSchema = {
             ],
         },
         {    
+            name: "Outfit",
+            level: 200,
+            features: [
+                { 
+                    name: "Singlet",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ 
+                                "./assets/occupation_luchador1.png",
+                                "./assets/occupation_luchador2_back.png",
+                            ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ 
+                                {
+                                    image: "./assets/occupation_luchador1.png",
+                                    tint: "#46e3ff",
+                                },
+                                {
+                                    image: "./assets/occupation_luchador2_back.png",
+                                    tint: "#46e3ff",
+                                },
+                            ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ 
+                                {
+                                    image: "./assets/occupation_luchador1.png",
+                                    tint: "#f5d10a",
+                                },
+                                {
+                                    image: "./assets/occupation_luchador2_back.png",
+                                    tint: "#f5d10a",
+                                },
+                            ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_luchador2.png", "./assets/occupation_luchador2_back.png" ],
+                        },
+                    ] 
+                },
+                {
+                    name: "Bearstappen",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_racer.png", "./assets/occupation_racer_back.png" ],
+                },
+                {
+                    name: "Football player",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_mufc.png", "./assets/occupation_mufc_back.png" ],
+                },
+                {
+                    name: "William Mapan hoodie",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_creator_mapan.png", "./assets/occupation_creator_mapan_back.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_creator_mapan.png", "./assets/occupation_creator_mapan_back.png", "./assets/occupation_creator_mapan_top.png" ],
+                        },
+                    ]
+                },
+                {
+                    name: "Yazid's brand",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
+                },
+                { 
+                    name: "Developer",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_creator_engineer.png", "./assets/occupation_creator_engineer_back.png" ]
+                },
+                { 
+                    name: "Explorer",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_explorer.png",
+                        tinted: false,
+                    }, {
+                        image: "./assets/occupation_explorer_back.png",
+                        tinted: false,
+                    } ]
+                },
+                { 
+                    name: "Emmet Brown",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_emmet_brown.png",
+                        tinted: false,
+                    }, {
+                        image: "./assets/occupation_emmet_brown_back.png",
+                        tinted: false,
+                    } ]
+                },
+                {
+                    name: "Farmer",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_farmer1.png", "./assets/occupation_farmer1_back.png" ],
+                },
+                {
+                    name: "American Gothic farmer",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_farmer2.png", "./assets/occupation_farmer2_back.png" ],
+                    level: 800,
+                },
+                { 
+                    name: "Inmate", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_felon.png", "./assets/occupation_felon_back.png" ],
+                    chance: 0.6,
+                },
+                {
+                    name: "Fisher",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_fisher1.png", "./assets/occupation_fisher1_back.png" ],
+                },
+                {   
+                    name: "Nordic sweater fisher",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_fisher2.png", "./assets/occupation_fisher2_back.png" ],
+                },
+                { 
+                    name: "Bathrobe",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_investor.png", "./assets/occupation_investor_back.png" ],
+                    chance: 0.5,
+                },
+                {
+                    name: "Shirt",
+                    type: PFP.ASSET_DUAL,
+                    chance: 0.7,
+                    assets: [ {
+                        image: "./assets/occupation_citizen1_for_tinting.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_citizen1_back.png",
+                        tint: true,
+                    },
+                    {
+                        image: "./assets/occupation_citizen1_buttons.png",
+                        tint: false,
+                    }
+                    ],
+                },
+                {
+                    name: "Banana shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_citizen1_for_tinting.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_citizen1_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_citizen1_bananas.png",
+                        tinted: false,
+                    } ],
+                },
+                {
+                    type: PFP.ASSET_DUAL,
+                    chance: 0.9,
+                    name: "SMOLSKULLs shirt",
+                    assets: [ {
+                        image: "./assets/occupation_citizen1_for_tinting.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_citizen1_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_citizen1_smolskullz.png",
+                        tinted: false,
+                    } ],
+                },
+                {
+                    name: "ertdfgcvb shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_andreasgysin.png" ],
+                },
+                {
+                    name: "Glomularus",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_glomularus.png", "./assets/occupation_glomularus_back.png" ],
+                },
+                {
+                    name: "Nirvana shirt",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
+                        },
+                    ]
+                },
+                {
+                    name: "Art Basel shirt",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_art_basel.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_art_basel.png" ],
+                        },
+                    ]
+                },
+                {
+                    name: "Casual",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ { image: "./assets/occupation_tshirt_white.png", tint: true }, "./assets/occupation_creator_back.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ { image: "./assets/occupation_tshirt_white_long_sleeve.png", tint: true }, "./assets/occupation_creator_back.png" ],
+                        },
+                    ],
+                    chance: 0.2,
+                },
+                {
+                    name: "fx(hash) shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_fxhash.png" ],
+                },
+                {
+                    name: "The Hill-side shirt",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_thehillside.png" ],
+                },
+                {
+                    name: "WGMI hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_wgmi.png",
+                        tinted: false,
+                    } ],
+                },{
+                    name: "Rare hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_rare.png",
+                        tinted: false,
+                    } ],
+                },{
+                    name: "GM hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_investor_hoodie_gm.png",
+                        tinted: false,
+                    } ],
+                },
+                {
+                    name: "GN hoodie",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ {
+                        image: "./assets/occupation_investor_hoodie.png",
+                        tint: true,
+                    }, {
+                        image: "./assets/occupation_investor_hoodie_back.png",
+                        tint: true,
+                    },{
+                        image: "./assets/occupation_investor_hoodie_gn.png",
+                        tinted: false,
+                    } ],
+                },
+                { 
+                    name: "Ninja", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_ninja.png", "./assets/occupation_ninja_back.png" ]
+                },
+            ],
+        },
+        {    
+            name: "Headwear",
+            level: 300,
+            features: [
+                {
+                    type: PFP.ASSET_OPTIONS,
+                    name: "Luchador mask", 
+                    chance: 1000,
+                    options: [
+                        { 
+                            type: PFP.ASSET_FRONT,
+                            asset: "./assets/eyewear_luchador.png",
+                            chance: 4,
+                        },
+                        {
+                            type: PFP.ASSET_FRONT,
+                            asset: "./assets/eyewear_nftbiker.png",
+                            chance: 2,
+                        },
+                    ],
+                },
+                { 
+                    name: "Noya hat",
+                    type: PFP.ASSET_FRONT,
+                    assets: [
+                        {
+                            image: "./assets/headwear_hat_cap.png",
+                            tint: true,
+                        },
+                        {
+                            image: "./assets/headwear_hat_visor.png",
+                            tint: true,
+                        },
+                        {
+                            image: "./assets/headwear_hat_noya.png",
+                            tint: false,
+                        },
+                    ],
+                },
+                { 
+                    name: "Nudoru hat",
+                    type: PFP.ASSET_FRONT,
+                    assets: [
+                        {
+                            image: "./assets/headwear_hat_cap.png",
+                            tint: ["#ed9ff6", "#f26f7d"],
+                        },
+                        {
+                            image: "./assets/headwear_hat_nudoru.png",
+                            tint: false,
+                        },
+                        {
+                            image: "./assets/headwear_hat_visor.png",
+                            tint: ["#d965e7", "#f26f7d", "#b1ef63"],
+                        },
+                    ],
+                },
+                { 
+                    name: "Beekeeper", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_beekeeper.png", "./assets/headwear_beekeeper_back.png" ],
+                    chance: 0.6,
+                    level: 800,
+                },
+                {
+                    name: "Tupac bandana", 
+                    type: PFP.ASSET_FRONT,
+                    asset: "./assets/headwear_tupac_bandana.png",
+                },
+                { 
+                    name: "Hard top", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_engineer.png", "./assets/headwear_engineer_back.png" ],
+                },
+                { 
+                    name: "Kasa", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_kasa.png", "./assets/headwear_kasa_back.png" ],
+                },
+                { 
+                    name: "Top hat", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_top_hat.png", "./assets/headwear_top_hat_back.png" ],
+                },
+                {
+                    name: "RCS headband", 
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_FRONT,
+                            asset: "./assets/headwear_rcs.png",
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome.png" ],
+                        },
+                    ]
+                },
+                {
+                    name: "Arab hat", 
+                    type: PFP.ASSET_DUAL,
+                    assets: ["./assets/headwear_arab_hat.png", "./assets/headwear_arab_hat_back.png"],
+                },
+                {
+                    name: "RIGHT CLICK SAVE headband", 
+                    type: PFP.ASSET_FRONT,
+                    asset: "./assets/headwear_rcs.png",
+                    chance: 0.25,
+                },
+                {
+                    name: "RIGHT CLICK SAVE Artnome headband", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome.png" ],
+                    chance: 0.25,
+                },
+                {
+                    name: "ClubNFT headband", 
+                    type: PFP.ASSET_FRONT,
+                    asset: "./assets/headwear_clubnft.png",
+                    chance: 0.25,
+                },
+                {
+                    name: "Hipster hat", 
+                    type: PFP.ASSET_FRONT,
+                    asset: {
+                        image: "./assets/headwear_hipster_hat.png",
+                        tint: true,
+                    },
+                },
+                {
+                    name: "ClubNFT Artnome headband", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_clubnft.png", "./assets/headwear_artnome.png" ],
+                    chance: 0.25,
+                },
+                { 
+                    name: "Spiky punk", 
+                    asset: {
+                        image: "./assets/headwear_blue_punk.png",
+                        tint: true,
+                    },
+                    chance: 0.5,
+                },
+                { 
+                    name: "Ryan Bell's Moonbird", 
+                    asset: "./assets/headwear_ryans_owl.png",
+                },
+                { 
+                    name: "Mohawk punk", 
+                    type: PFP.ASSET_OPTIONS,
+                    chance: 0.7,
+                    options: [
+                        {
+                            type: PFP.ASSET_FRONT,
+                            asset: "./assets/headwear_pink_punk.png",
+                        },
+                        {
+                            type: PFP.ASSET_FRONT,
+                            asset: {
+                                image: "./assets/headwear_pink_punk.png",
+                                tint: "#f5d10a",
+                            }
+                        },
+                        {
+                            type: PFP.ASSET_FRONT,
+                            asset: {
+                                image: "./assets/headwear_pink_punk.png",
+                                tint: "#9a04fc",
+                            }
+                        },
+                    ]
+                },
+                { 
+                    name: "Punevyr's cap", 
+                    asset: "./assets/headwear_punevyr_cap.png",
+                    chance: 0.5,
+                },
+                { 
+                    name: "Party hat", 
+                    asset: "./assets/headwear_party_hat.png",
+                },
+                { 
+                    type: PFP.ASSET_DUAL,
+                    name: "Inka hat", 
+                    assets: [ 
+                        {
+                            image: "./assets/headwear_inka_hat.png",
+                            tint: true,
+                        },
+                        {
+                            image: "./assets/headwear_inka_hat_back.png",
+                            tint: true,
+                        }
+                    ]
+                },
+                { 
+                    name: "Swimming cap", 
+                    asset: "./assets/headwear_swimming_cap.png",
+                },
+                { 
+                    name: "Beanie", 
+                    asset: {
+                        image: "./assets/headwear_beanie.png",
+                        tint: true,
+                    }
+                },
+                { 
+                    name: "Cat ears", 
+                    asset: "./assets/headwear_cat_ears.png",
+                },
+                { 
+                    name: "Bunny ears", 
+                    asset: "./assets/headwear_bunny_ears.png",
+                },
+                { 
+                    name: "Karate headband", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_karate_band.png", "./assets/headwear_karate_band_back.png" ],
+                },
+                { 
+                    name: "Zancan headband", 
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: ["./assets/headwear_zancan_band.png", "./assets/headwear_zancan_band_back.png"],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: ["./assets/headwear_zancan_green_band.png", "./assets/headwear_zancan_green_band_back.png"],
+                        }
+                    ]
+                },
+                { 
+                    name: "Crown", 
+                    asset: "./assets/headwear_crown.png",
+                },
+                { 
+                    name: "Fisher hat",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_fisher_hat.png", "./assets/headwear_fisher_hat_back.png" ],
+                },
+                { 
+                    name: "Captain hat", 
+                    asset: "./assets/headwear_captain_hat.png",
+                },
+                { 
+                    type: PFP.ASSET_OPTIONS,
+                    name: "Space helmet", 
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/headwear_space_helmet_golden.png", "./assets/headwear_space_helmet_back.png", "./assets/headwear_space_helmet_cover.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/headwear_space_helmet_red_dot.png", "./assets/headwear_space_helmet_back.png", "./assets/headwear_space_helmet_cover.png" ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ "./assets/headwear_space_helmet_green.png", "./assets/headwear_space_helmet_back.png", "./assets/headwear_space_helmet_cover.png" ],
+                        },
+                    ],
+                    level: 800,
+                },
+                { 
+                    type: PFP.ASSET_BACK,
+                    name: "Basquiat's hairdo", 
+                    asset: "./assets/headwear_basquiat_hairdo.png",
+                },
+                { 
+                    type: PFP.ASSET_DUAL,
+                    name: "Yazid's hairdo", 
+                    assets: [ "./assets/headwear_yazid.png", "./assets/headwear_yazid_back.png" ],
+                },
+            ],
+        },
+        {    
             name: "Eyewear",
-            level: 600,
+            level: 400,
             features: [
                 { 
                     name: "Glasses", 
@@ -827,7 +836,6 @@ losOsosSchema = {
                 {
                     type: PFP.ASSET_OPTIONS,
                     name: "Ninja band",
-                    level: 604,
                     options: [{
                         type: PFP.ASSET_DUAL,
                         assets: [ "./assets/eyewear_ninja_band_yellow.png", "./assets/eyewear_ninja_band_back_yellow.png" ],
@@ -855,24 +863,6 @@ losOsosSchema = {
                         tint: true,
                     },
                 },
-                {
-                    type: PFP.ASSET_OPTIONS,
-                    name: "Luchador mask", 
-                    chance: 1000,
-                    level: 610,
-                    options: [
-                        { 
-                            type: PFP.ASSET_FRONT,
-                            asset: "./assets/eyewear_luchador.png",
-                            chance: 4,
-                        },
-                        {
-                            type: PFP.ASSET_FRONT,
-                            asset: "./assets/eyewear_nftbiker.png",
-                            chance: 2,
-                        },
-                    ],
-                },
                 { 
                     type: PFP.ASSET_DUAL,
                     name: "Monocle", 
@@ -882,56 +872,23 @@ losOsosSchema = {
         },
         {    
             name: "Mouth",
-            level: 400,
+            level: 500,
             features: [
                 { 
                     name: "RGB puke", 
                     asset: "./assets/mouth_rgb_puke.png",
-                    level: 615,
                 },
                 { 
                     name: "Tender pass", 
                     asset: "./assets/mouth_tender_pass.png",
-                    level: 615,
                 },
                 { 
                     name: "Bubble gum", 
                     asset: "./assets/mouth_bubble_gum.png",
-                    level: 615,
-                },
-                { 
-                    name: "Wheat straw", 
-                    asset: "./assets/mouth_wheat_straw.png",
-                },
-                { 
-                    name: "Confused", 
-                    asset: "./assets/mouth_confused.png",
-                },
-                { 
-                    name: "Surprised", 
-                    asset: "./assets/mouth_surprised.png",
-                },
-                { 
-                    name: "Señor mustache", 
-                    asset: "./assets/mouth_mustache.png",
-                },
-                { 
-                    name: "Dalí mustache", 
-                    asset: "./assets/mouth_dali_mustache.png",
-                    level: 605,
-                },
-                { 
-                    name: "Lollipop", 
-                    asset: "./assets/mouth_lollipop.png",
-                },
-                { 
-                    name: "Eating berries", 
-                    asset: "./assets/mouth_eating_berries.png",
                 },
                 { 
                     name: "Bamboo", 
                     asset: "./assets/mouth_bamboo.png",
-                    level: 505,
                 },
                 { 
                     name: "Snorkel", 
@@ -954,8 +911,6 @@ losOsosSchema = {
                             tint: true,
                         },
                     ],                        
-                    level: 620,
-                    chance: 1000,
                 },
                 { 
                     name: "Disc", 
@@ -966,42 +921,75 @@ losOsosSchema = {
                             tint: true,
                         },
                     ],
-                    level: 615,
+                },
+                { 
+                    name: "Dangerous", 
+                    asset: "./assets/mouth_hannibal.png",
+                    chance: 0.3,
                 },
                 { 
                     name: "Salmon", 
                     asset: "./assets/mouth_salmon.png",
                 },
                 { 
+                    name: "Wheat straw", 
+                    asset: "./assets/mouth_wheat_straw.png",
+                    level: 250,
+                },
+                { 
+                    name: "Confused", 
+                    asset: "./assets/mouth_confused.png",
+                    level: 250,
+                },
+                { 
+                    name: "Surprised", 
+                    asset: "./assets/mouth_surprised.png",
+                    level: 250,
+                },
+                { 
+                    name: "Señor mustache", 
+                    asset: "./assets/mouth_mustache.png",
+                    level: 250,
+                },
+                { 
+                    name: "Dalí mustache", 
+                    asset: "./assets/mouth_dali_mustache.png",
+                    level: 250,
+                },
+                { 
+                    name: "Lollipop", 
+                    asset: "./assets/mouth_lollipop.png",
+                    level: 250,
+                },
+                { 
+                    name: "Eating berries", 
+                    asset: "./assets/mouth_eating_berries.png",
+                    level: 250,
+                },
+                { 
                     name: "Artnome beard", 
                     asset: "./assets/mouth_artnome.png",
-                    level: 180,
+                    level: 250,
                 },
                 { 
                     name: "Gold tooth smile", 
                     asset: "./assets/mouth_gold_tooth.png",
-                    level: 380,
+                    level: 250,
                 },
                 { 
                     name: "OK", 
                     asset: "./assets/mouth_ok.png",
-                    level: 380,
+                    level: 250,
                 },
                 { 
                     name: "Smile", 
                     asset: "./assets/mouth_smile.png",
-                    level: 380,
+                    level: 250,
                 },
                 { 
                     name: "Tongue out", 
                     asset: "./assets/mouth_tongue_out.png",
-                    level: 380,
-                },
-                { 
-                    name: "Dangerous", 
-                    asset: "./assets/mouth_hannibal.png",
-                    level: 384,
-                    chance: 0.3,
+                    level: 250,
                 },
             ],
         },

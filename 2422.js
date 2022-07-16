@@ -534,6 +534,25 @@ losOsosSchema = {
                     ],
                 },
                 { 
+                    name: "Backwards hat", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ 
+                        {
+                            image: "./assets/headwear_backwards_hat1.png",
+                            tint: true, 
+                        }, 
+                        {
+                            image: "./assets/headwear_backwards_hat_back.png",
+                            tint: true, 
+                        },
+                        {
+                            image: "./assets/headwear_backwards_hat2.png",
+                            tint: true
+                        },
+                    ],
+                    chance: 1000,
+                },
+                { 
                     name: "Noya hat",
                     type: PFP.ASSET_FRONT,
                     assets: [
@@ -553,22 +572,43 @@ losOsosSchema = {
                 },
                 { 
                     name: "Killed by a Pixel hat",
-                    type: PFP.ASSET_FRONT,
-                    chance: 1000,
-                    assets: [
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
                         {
-                            image: "./assets/headwear_hat_cap.png",
-                            tint: ["#4abed8", "#25f47f", "#c4b4fb"],
+                            type: PFP.ASSET_FRONT,
+                            assets: [
+                                {
+                                    image: "./assets/headwear_hat_cap.png",
+                                    tint: ["#4abed8", "#25f47f", "#c4b4fb", "#f4e054", "#e8e2b9"],
+                                },
+                                {
+                                    image: "./assets/headwear_hat_visor.png",
+                                    tint: ["#4abed8", "#25f47f", "#c4b4fb", "#f4e054", "#e8e2b9"],
+                                },
+                                {
+                                    image: "./assets/headwear_ff.png",
+                                    tint: "#000000",
+                                },
+                            ],
                         },
                         {
-                            image: "./assets/headwear_hat_visor.png",
-                            tint: ["#4abed8", "#25f47f", "#c4b4fb"],
-                        },
-                        {
-                            image: "./assets/headwear_ff.png",
-                            tint: "#000000",
-                        },
-                    ],
+                            type: PFP.ASSET_FRONT,
+                            assets: [
+                                {
+                                    image: "./assets/headwear_hat_cap.png",
+                                    tint: ["#f20b68", "#ff2f00", "#8d1ee6"],
+                                },
+                                {
+                                    image: "./assets/headwear_hat_visor.png",
+                                    tint: ["#f20b68", "#ff2f00", "#8d1ee6"],
+                                },
+                                {
+                                    image: "./assets/headwear_ff.png",
+                                    tint: "#f0f0f0",
+                                },
+                            ],
+                        }
+                    ]
                 },
                 { 
                     name: "Hand-painted Nudoru hat",
@@ -843,7 +883,6 @@ losOsosSchema = {
                 { 
                     name: "Anonymous", 
                     assets: [ "./assets/eyewear_glasses.png", "./assets/eyewear_anonymous.png" ],
-                    chance: 0.3,
                 },
                 { 
                     name: "Sunglasses", 

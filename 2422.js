@@ -64,7 +64,7 @@ losOsosSchema = {
                     name: "Gummy Bear",
                     assets: [{
                         image: "./assets/species_gummy.png",
-                        tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff9c00"],
+                        tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff7800"],
                     }, "./assets/species_gummy_lights.png"
                     ],
                     chance: 1000,
@@ -261,13 +261,14 @@ losOsosSchema = {
                     assets: [ "./assets/occupation_racer.png", "./assets/occupation_racer_back.png" ],
                 },
                 {
-                    name: "Football player",
+                    name: "Metabears United player",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_mufc.png", "./assets/occupation_mufc_back.png" ],
                 },
                 {
                     name: "William Mapan hoodie",
                     type: PFP.ASSET_OPTIONS,
+                    level: 275,
                     options: [
                         {
                             type: PFP.ASSET_DUAL,
@@ -598,16 +599,18 @@ losOsosSchema = {
                     type: PFP.ASSET_OPTIONS,
                     options: [
                         {
-                            type: PFP.ASSET_FRONT,
+                            type: PFP.ASSET_DUAL,
                             assets: [
                                 {
                                     image: "./assets/headwear_hat_cap.png",
                                     tint: ["#4abed8", "#25f47f", "#c4b4fb", "#f4e054", "#e8e2b9"],
                                 },
+                                "./assets/headwear_cap_back.png",
                                 {
                                     image: "./assets/headwear_hat_visor.png",
                                     tint: ["#4abed8", "#25f47f", "#c4b4fb", "#f4e054", "#e8e2b9"],
                                 },
+                                "./assets/empty.png",
                                 {
                                     image: "./assets/headwear_ff.png",
                                     tint: "#000000",
@@ -615,16 +618,18 @@ losOsosSchema = {
                             ],
                         },
                         {
-                            type: PFP.ASSET_FRONT,
+                            type: PFP.ASSET_DUAL,
                             assets: [
                                 {
                                     image: "./assets/headwear_hat_cap.png",
                                     tint: ["#f20b68", "#ff2f00", "#8d1ee6"],
                                 },
+                                "./assets/headwear_cap_back.png",
                                 {
                                     image: "./assets/headwear_hat_visor.png",
                                     tint: ["#f20b68", "#ff2f00", "#8d1ee6"],
                                 },
+                                "./assets/empty.png",
                                 {
                                     image: "./assets/headwear_ff.png",
                                     tint: "#f0f0f0",
@@ -635,21 +640,23 @@ losOsosSchema = {
                 },
                 { 
                     name: "Hand-painted Nudoru hat",
-                    type: PFP.ASSET_FRONT,
-                    chance: 0.6,
+                    type: PFP.ASSET_DUAL,
                     assets: [
                         {
                             image: "./assets/headwear_hat_cap.png",
                             tint: ["#cbd8b5", "#f2e8d3"],
                         },
+                        "./assets/headwear_cap_back.png",
                         {
                             image: "./assets/headwear_hat_cap_cover.png",
                             tint: ["#ed9ff6", "#91dcff", "#f26f7d"],
                         },
+                        "./assets/empty.png",
                         {
                             image: "./assets/headwear_hat_nudoru.png",
                             tint: false,
                         },
+                        "./assets/empty.png",
                         {
                             image: "./assets/headwear_hat_visor.png",
                             tint: ["#91dcff", "#f26f7d", "#b1ef63"],
@@ -696,8 +703,8 @@ losOsosSchema = {
                 },
                 {
                     name: "RIGHT CLICK SAVE headband", 
-                    type: PFP.ASSET_FRONT,
-                    asset: "./assets/headwear_rcs.png",
+                    type: PFP.ASSET_DUAL,
+                    assets: ["./assets/headwear_rcs.png", "./assets/headwear_headband_back.png" ],
                     chance: 0.25,
                 },
                 {
@@ -708,8 +715,8 @@ losOsosSchema = {
                 },
                 {
                     name: "ClubNFT headband", 
-                    type: PFP.ASSET_FRONT,
-                    asset: "./assets/headwear_clubnft.png",
+                    type: PFP.ASSET_DUAL,
+                    assets: ["./assets/headwear_clubnft.png", "./assets/headwear_headband_back.png" ],
                     chance: 0.25,
                 },
                 {
@@ -720,11 +727,24 @@ losOsosSchema = {
                 },
                 {
                     name: "Hipster hat", 
-                    type: PFP.ASSET_FRONT,
-                    asset: {
-                        image: "./assets/headwear_hipster_hat.png",
-                        tint: true,
-                    },
+                    type: PFP.ASSET_DUAL,
+                    chance: 1000,
+                    assets: [
+                        {
+                            image: "./assets/headwear_hipster_hat1.png",
+                            tint: [ "#e60d0d", "#46e3ff", "#dd0f66", "#eeede6" ],
+                        },
+                        "./assets/headwear_hipster_hat_back.png",
+                        {
+                            image: "./assets/headwear_hipster_hat3.png",
+                            tint: [ "#3fb033", "#f5d10a", "#e1d9a0" ],
+                        },
+                        "./assets/empty.png",
+                        {
+                            image: "./assets/headwear_hipster_hat2.png",
+                            tint: false,
+                        },
+                    ],
                 },
                 { 
                     name: "Spiky punk", 
@@ -765,8 +785,8 @@ losOsosSchema = {
                 },
                 { 
                     name: "Punevyr's cap", 
-                    asset: "./assets/headwear_punevyr_cap.png",
-                    chance: 0.5,
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_punevyr_cap.png", "./assets/headwear_punevyr_cap_back.png" ],
                 },
                 { 
                     name: "Party hat", 
@@ -788,14 +808,27 @@ losOsosSchema = {
                 },
                 { 
                     name: "Swimming cap", 
-                    asset: "./assets/headwear_swimming_cap.png",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ 
+                        { 
+                            image: "./assets/headwear_swimming_cap.png",
+                            tint: true, 
+                        }
+                        , "./assets/headwear_swimming_cap_back.png",
+                        "./assets/headwear_swimming_cap_goggles.png"
+                    ],
                 },
                 { 
                     name: "Beanie", 
-                    asset: {
+                    type: PFP.ASSET_DUAL,
+                    assets: [{
                         image: "./assets/headwear_beanie.png",
                         tint: true,
+                    }, {
+                        image: "./assets/headwear_beanie_back.png",
+                        tint: true,
                     }
+                    ]
                 },
                 { 
                     name: "Cat ears", 
@@ -841,7 +874,6 @@ losOsosSchema = {
                 { 
                     type: PFP.ASSET_OPTIONS,
                     name: "Space helmet", 
-                    chance: 1000,
                     options: [
                         {
                             type: PFP.ASSET_DUAL,
@@ -916,10 +948,13 @@ losOsosSchema = {
                 },
                 { 
                     name: "Goggles", 
+                    type: PFP.ASSET_DUAL,
                     assets: [{
                         image: "./assets/eyewear_snorkel.png",
                         tint: false,
-                    }, {
+                    }, 
+                    "./assets/eyewear_snorkel_back.png",
+                    {
                         image: "./assets/eyewear_snorkel_color.png",
                         tint: true,
                     }],
@@ -936,7 +971,6 @@ losOsosSchema = {
                 {
                     type: PFP.ASSET_OPTIONS,
                     name: "Ninja band",
-                    chance: 1000,
                     options: [{
                         type: PFP.ASSET_DUAL,
                         assets: [ "./assets/eyewear_ninja_band_yellow.png", "./assets/eyewear_ninja_band_back_yellow.png" ],

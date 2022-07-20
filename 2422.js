@@ -27,17 +27,9 @@ losOsosSchema = {
                     assets: ["./assets/district_yellow.png", "./assets/district_texture.png"],
                 },
                 {
-                    name: "Black",   
-                    assets: ["./assets/district_black.png", "./assets/district_texture.png"],
-                },
-                {
                     name: "Purple",   
                     assets: ["./assets/district_purple.png", "./assets/district_texture.png"],
                 },
-                {
-                    name: "White",   
-                    assets: ["./assets/district_gray.png", "./assets/district_texture.png"],
-                }
             ]
         },
         {
@@ -67,7 +59,7 @@ losOsosSchema = {
                         tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff7800"],
                     }, "./assets/species_gummy_lights.png"
                     ],
-                    chance: 1000,
+                    chance: 0.1,
                 },
                 { 
                     name: "Mechabear",   
@@ -578,16 +570,18 @@ losOsosSchema = {
                 },
                 { 
                     name: "Noya hat",
-                    type: PFP.ASSET_FRONT,
+                    type: PFP.ASSET_DUAL,
                     assets: [
                         {
                             image: "./assets/headwear_hat_cap.png",
                             tint: true,
                         },
+                        "./assets/headwear_cap_back.png",
                         {
                             image: "./assets/headwear_hat_visor.png",
                             tint: true,
                         },
+                        "./assets/empty.png",
                         {
                             image: "./assets/headwear_hat_noya.png",
                             tint: false,
@@ -726,9 +720,8 @@ losOsosSchema = {
                     chance: 0.25,
                 },
                 {
-                    name: "Hipster hat", 
+                    name: "Pork pie hat", 
                     type: PFP.ASSET_DUAL,
-                    chance: 1000,
                     assets: [
                         {
                             image: "./assets/headwear_hipster_hat1.png",
@@ -756,7 +749,8 @@ losOsosSchema = {
                 },
                 { 
                     name: "Ryan Bell's Moonbird", 
-                    asset: "./assets/headwear_ryans_owl.png",
+                    type: PFP.ASSET_DUAL,
+                    assets: ["./assets/headwear_ryans_owl.png", "./assets/headwear_ryans_owl_back.png"],
                 },
                 { 
                     name: "Mohawk punk", 
@@ -1059,22 +1053,15 @@ losOsosSchema = {
                     ],
                 },
                 { 
-                    name: "Dangerous", 
-                    asset: "./assets/mouth_hannibal.png",
-                    chance: 0.3,
-                    level: 305,
-                },
-                { 
                     name: "Salmon", 
                     asset: "./assets/mouth_salmon.png",
                 },
                 { 
                     name: "Wheat straw", 
                     asset: "./assets/mouth_wheat_straw.png",
-                    level: 250,
                 },
                 { 
-                    name: "Confused", 
+                    name: "Hmmmm", 
                     asset: "./assets/mouth_confused.png",
                     level: 250,
                 },

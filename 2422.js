@@ -1,4 +1,4 @@
-losOsosSchema = {
+const losOsosSchema = {
     canvas: {
         width: 1488,
         height: 1800,
@@ -12,23 +12,23 @@ losOsosSchema = {
             features: [
                 {
                     name: "Blue",   
-                    assets: ["./assets/district_blue.png", "./assets/district_texture.png"],
+                    asset: "./assets/district_blue.png",
                 },
                 {
                     name: "Green", 
-                    assets: ["./assets/district_green.png", "./assets/district_texture.png"],
+                    asset: "./assets/district_green.png",
                 },
                 {
                     name: "Red",   
-                    assets: ["./assets/district_red.png", "./assets/district_texture.png"],
+                    asset: "./assets/district_red.png",
                 },
                 {
                     name: "Yellow",   
-                    assets: ["./assets/district_yellow.png", "./assets/district_texture.png"],
+                    asset: "./assets/district_yellow.png",
                 },
                 {
                     name: "Purple",   
-                    assets: ["./assets/district_purple.png", "./assets/district_texture.png"],
+                    asset: "./assets/district_purple.png",
                 },
             ]
         },
@@ -59,12 +59,7 @@ losOsosSchema = {
                         tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff7800"],
                     }, "./assets/species_gummy_lights.png"
                     ],
-                    chance: 0.1,
-                },
-                { 
-                    name: "Mechabear",   
-                    asset: "./assets/species_mecha.png",
-                    chance: 0,
+                    chance: 0.2,
                 },
             ]
         },
@@ -324,7 +319,6 @@ losOsosSchema = {
                     name: "American Gothic farmer",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_farmer2.png", "./assets/occupation_farmer2_back.png" ],
-                    level: 800,
                 },
                 { 
                     name: "Inmate", 
@@ -333,12 +327,12 @@ losOsosSchema = {
                     chance: 0.6,
                 },
                 {
-                    name: "Fisher",
+                    name: "Jacket",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_fisher1.png", "./assets/occupation_fisher1_back.png" ],
                 },
                 {   
-                    name: "Nordic sweater fisher",
+                    name: "Nordic fisher",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_fisher2.png", "./assets/occupation_fisher2_back.png" ],
                 },
@@ -571,6 +565,7 @@ losOsosSchema = {
                 { 
                     name: "Noya hat",
                     type: PFP.ASSET_DUAL,
+                    chance: 0,
                     assets: [
                         {
                             image: "./assets/headwear_hat_cap.png",
@@ -690,10 +685,15 @@ losOsosSchema = {
                     type: PFP.ASSET_FRONT,
                     asset: "./assets/headwear_top_hat.png",
                 },
+                { 
+                    name: "Patty flipper", 
+                    type: PFP.ASSET_FRONT,
+                    asset: "./assets/headwear_patty_flipper.png",
+                },
                 {
                     name: "Arab hat", 
                     type: PFP.ASSET_DUAL,
-                    assets: ["./assets/headwear_arab_hat.png", "./assets/headwear_arab_hat_back.png"],
+                    assets: ["./assets/empty.png", "./assets/headwear_arab_hat_back.png"],
                 },
                 {
                     name: "RIGHT CLICK SAVE headband", 
@@ -1012,6 +1012,10 @@ losOsosSchema = {
                     asset: "./assets/mouth_tender_pass.png",
                 },
                 { 
+                    name: "Astronomical Comics postcard", 
+                    asset: "./assets/mouth_astronomical_comics.png",
+                },
+                { 
                     name: "Bubble gum", 
                     asset: "./assets/mouth_bubble_gum.png",
                 },
@@ -1101,7 +1105,7 @@ losOsosSchema = {
                     level: 250,
                 },
                 { 
-                    name: "OK", 
+                    name: "Meh", 
                     asset: "./assets/mouth_ok.png",
                     level: 250,
                 },
@@ -1150,3 +1154,7 @@ losOsosSchema = {
         },
     ]
 };
+
+window.losOsosSchema = losOsosSchema;
+
+export default losOsosSchema;

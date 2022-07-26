@@ -30,6 +30,10 @@ const losOsosSchema = {
                     name: "Purple",   
                     asset: "./assets/district_purple.png",
                 },
+                {
+                    name: "Black",   
+                    asset: "./assets/district_black.png",
+                },
             ]
         },
         {
@@ -1012,7 +1016,7 @@ const losOsosSchema = {
                     asset: "./assets/mouth_tender_pass.png",
                 },
                 { 
-                    name: "Astronomical Comics postcard", 
+                    name: "Astronomic Comics signed postcard", 
                     asset: "./assets/mouth_astronomical_comics.png",
                 },
                 { 
@@ -1081,8 +1085,12 @@ const losOsosSchema = {
                 },
                 { 
                     name: "Dalí mustache", 
-                    asset: "./assets/mouth_dali_mustache.png",
-                    level: 250,
+                    assets: [ {
+                        image: "./assets/mouth_dali_mustache.png"
+                    }, {
+                        image: "./assets/mouth_dali_mustache_mouth.png",
+                        level: 250,
+                    }],
                 },
                 { 
                     name: "Lollipop", 

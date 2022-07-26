@@ -51,12 +51,12 @@ class PFPFactory {
                     throw "The feature " + feature.name + " must have an asset associated with it.";
                 }
                 if(feature.asset !== undefined) {
-                    pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, feature.level || category.level, this.defineTintColor(feature.asset.tint, feature.tintColor)));
+                    pfp.addAsset(new PFPImageAsset(feature.name, feature.asset, this.schema.canvas, feature.asset.level || feature.level || category.level, this.defineTintColor(feature.asset.tint, feature.tintColor)));
                 } else {
                     if(typeof feature.assets === "object") {
-                        let currentLevel =  feature.level || category.level;
                         for (let i = 0; i < feature.assets.length; i++) {
                             const asset = feature.assets[i];
+                            let currentLevel =  asset.level || feature.level || category.level;
                             pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, currentLevel++, this.defineTintColor(asset.tint, feature.tintColor)));
                         }
                     }

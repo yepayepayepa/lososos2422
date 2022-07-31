@@ -53,7 +53,7 @@ class FxhashPseudorandomProvider {
 }
 
 
-pseudorandom = {
+const pseudorandom = {
     pseudorandomProvider: new DefaultPseudorandomProvider("1234123412341234123412341234123412341234123412341234123412341234"),
     fxhash() {
         this.pseudorandomProvider = new FxhashPseudorandomProvider();
@@ -118,3 +118,7 @@ pseudorandom = {
         return this.pick(cleanList);
     },
 }
+
+window.pseudorandom = pseudorandom;
+
+export default pseudorandom;

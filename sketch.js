@@ -16,6 +16,7 @@ function setup() {
 
 function draw() {
     pfp.draw();
+    postProcess();
     fxpreview();
 }
 
@@ -33,3 +34,20 @@ function keyPressed() {
 
     }
 }
+
+function postProcess() {
+    addGrain(12);
+}
+
+function addGrain(n) {
+    pseudorandom.fxhash();
+    loadPixels();
+    for (let e = 0; e < width * pixelDensity() * (height * pixelDensity()) * 4; e += 4) {
+        let i = map(pseudorandom.decimal(), 0, 1, -n, n);
+        pixels[e] = pixels[e] + i,
+        pixels[e + 1] = pixels[e + 1] + i,
+        pixels[e + 2] = pixels[e + 2] + i,
+        pixels[e + 3] = pixels[e + 3] + i
+    }
+    updatePixels();
+  }

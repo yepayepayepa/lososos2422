@@ -61,7 +61,7 @@ const losOsosSchema = {
                     assets: [{
                         image: "./assets/species_gummy.png",
                         tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff7800"],
-                    }, "./assets/species_gummy_lights.png"
+                    }, "./assets/species_gummy_lights.png",
                     ],
                     chance: 0.2,
                 },
@@ -203,6 +203,12 @@ const losOsosSchema = {
             name: "Outfit",
             level: 200,
             features: [
+                {
+                    name: "Mecha Bear",
+                    type: PFP.ASSET_DUAL,
+                    level: 850,
+                    assets: [ "./assets/occupation_mecha_bear.png", "./assets/occupation_mecha_bear.png" ],
+                },
                 { 
                     name: "Singlet",
                     type: PFP.ASSET_OPTIONS,
@@ -400,7 +406,7 @@ const losOsosSchema = {
                 {
                     name: "OG with Glomularus",
                     type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_glomularus.png", "./assets/occupation_glomularus_back.png" ],
+                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_glomularus.png", "./assets/occupation_glomularus_back.png" ],
                 },
                 {
                     name: "Nirvana shirt",
@@ -526,7 +532,12 @@ const losOsosSchema = {
                 { 
                     name: "Ninja", 
                     type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_ninja.png", "./assets/occupation_ninja_back.png" ]
+                    assets: [ "./assets/occupation_ninja.png", 
+                        {
+                            image: "./assets/occupation_ninja_back.png",
+                            tint: true,
+                        }
+                    ]
                 },
             ],
         },
@@ -534,6 +545,11 @@ const losOsosSchema = {
             name: "Headwear",
             level: 300,
             features: [
+                { 
+                    name: "Cybear-brain", 
+                    type: PFP.ASSET_FRONT,
+                    asset: "./assets/headwear_mecha_bear.png",
+                },
                 {
                     type: PFP.ASSET_OPTIONS,
                     name: "Luchador mask", 
@@ -566,6 +582,7 @@ const losOsosSchema = {
                         },
                     ],
                 },
+
                 { 
                     name: "Noya hat",
                     type: PFP.ASSET_DUAL,
@@ -680,6 +697,11 @@ const losOsosSchema = {
                     assets: [ "./assets/headwear_chicken_mask.png", "./assets/headwear_chicken_mask_back.png" ],
                 },
                 { 
+                    name: "Yayoi Kusama wig", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/headwear_yayoi_kusama.png", "./assets/headwear_yayoi_kusama_back.png" ],
+                },
+                { 
                     name: "Kasa", 
                     type: PFP.ASSET_DUAL,
                         assets: [ "./assets/headwear_kasa.png", "./assets/headwear_kasa_back.png" ],
@@ -688,11 +710,17 @@ const losOsosSchema = {
                     name: "Top hat", 
                     type: PFP.ASSET_FRONT,
                     asset: "./assets/headwear_top_hat.png",
+                    chance: 0.35,
                 },
                 { 
                     name: "Patty flipper", 
                     type: PFP.ASSET_FRONT,
                     asset: "./assets/headwear_patty_flipper.png",
+                },
+                { 
+                    name: "Unpredictable taquero hat", 
+                    type: PFP.ASSET_FRONT,
+                    asset: "./assets/headwear_unpred_taco.png",
                 },
                 {
                     name: "Arab hat", 
@@ -703,25 +731,26 @@ const losOsosSchema = {
                     name: "RIGHT CLICK SAVE headband", 
                     type: PFP.ASSET_DUAL,
                     assets: ["./assets/headwear_rcs.png", "./assets/headwear_headband_back.png" ],
-                    chance: 0.25,
                 },
                 {
                     name: "RIGHT CLICK SAVE Artnome headband", 
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome_back.png" ],
-                    chance: 0.25,
                 },
                 {
                     name: "ClubNFT headband", 
                     type: PFP.ASSET_DUAL,
                     assets: ["./assets/headwear_clubnft.png", "./assets/headwear_headband_back.png" ],
-                    chance: 0.25,
                 },
                 {
                     name: "ClubNFT Artnome headband", 
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/headwear_clubnft.png", "./assets/headwear_artnome_back.png" ],
-                    chance: 0.25,
+                },
+                {
+                    name: "Lush Memories flower crown", 
+                    type: PFP.ASSET_DUAL,
+                    assets: ["./assets/headwear_lush_memories.png", "./assets/headwear_lush_memories_back.png" ],
                 },
                 {
                     name: "Pork pie hat", 
@@ -831,10 +860,12 @@ const losOsosSchema = {
                 { 
                     name: "Cat ears", 
                     asset: "./assets/headwear_cat_ears.png",
+                    chance: 0.35,
                 },
                 { 
                     name: "Bunny ears", 
                     asset: "./assets/headwear_bunny_ears.png",
+                    chance: 0.35,
                 },
                 { 
                     name: "Karate headband", 
@@ -905,6 +936,19 @@ const losOsosSchema = {
             level: 400,
             features: [
                 { 
+                    name: "Cybear-vision", 
+                    assets: [
+                        {
+                            image: "./assets/eyewear_mecha_bear_color.png",
+                            tint: true,
+                        }, "./assets/eyewear_mecha_bear.png",
+                        {
+                            image: "./assets/eyewear_mecha_bear_lights.png",
+                            tint: true,
+                        }
+                    ],
+                },
+                { 
                     name: "Glasses", 
                     asset: "./assets/eyewear_glasses.png",
                 },
@@ -923,6 +967,7 @@ const losOsosSchema = {
                 { 
                     name: "Anonymous", 
                     assets: [ "./assets/eyewear_glasses.png", "./assets/eyewear_anonymous.png" ],
+                    chance: 0.7,
                 },
                 { 
                     name: "Sunglasses", 
@@ -985,7 +1030,7 @@ const losOsosSchema = {
                     ]
                 },
                 { 
-                    name: "Sleep mask", 
+                    name: "Staking sleep mask", 
                     asset: "./assets/eyewear_sleep_mask.png",
                     chance: 0.6,
                 },
@@ -1007,6 +1052,15 @@ const losOsosSchema = {
             name: "Mouth",
             level: 500,
             features: [
+                { 
+                    name: "Cybear-mouth Towers model", 
+                    assets: [ {
+                        image: "./assets/mouth_mecha_bear_base.png",
+                        level: 50,
+                    }, {
+                        image: "./assets/mouth_mecha_bear.png",
+                    }],
+                },
                 { 
                     name: "RGB puke", 
                     asset: "./assets/mouth_rgb_puke.png",

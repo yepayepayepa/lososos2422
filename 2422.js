@@ -545,11 +545,11 @@ const losOsosSchema = {
             name: "Headwear",
             level: 300,
             features: [
-                { 
-                    name: "Cybear-brain", 
-                    type: PFP.ASSET_FRONT,
-                    asset: "./assets/headwear_mecha_bear.png",
-                },
+                // { 
+                //     name: "Cybear-brain", 
+                //     type: PFP.ASSET_FRONT,
+                //     asset: "./assets/headwear_mecha_bear.png",
+                // },
                 {
                     type: PFP.ASSET_OPTIONS,
                     name: "Luchador mask", 
@@ -679,6 +679,30 @@ const losOsosSchema = {
                     assets: [ "./assets/headwear_beekeeper.png", "./assets/headwear_beekeeper_back.png" ],
                     chance: 0.6,
                     level: 850,
+                },
+                {
+                    name: "Action helmet", 
+                    type: PFP.ASSET_DUAL,
+                    tints: ["#91dcff", "#ff74d9"],
+                    assets: [
+                        {
+                            image: "./assets/headwear_action_helmet_strap.png",
+                            tint: false,
+                            level: 100,
+                        }, {
+                            image: "./assets/headwear_action_helmet_back.png",
+                            tint: true,
+                        }, {
+                            image: "./assets/headwear_action_helmet.png",
+                            tint: true,
+                            level: 450,
+                        },
+                        "./assets/empty.png", {
+                            image: "./assets/headwear_action_helmet_action_cam.png",
+                            tint: false,
+                            level: 451,
+                        },
+                         ],
                 },
                 {
                     name: "Tupac bandana", 

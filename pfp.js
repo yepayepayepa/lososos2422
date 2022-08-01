@@ -82,10 +82,10 @@ class PFPFactory {
                 if(feature.assets.length < 2) {
                     throw "The feature " + feature.name + " must have two assets associated with it.";
                 }
-                let assetLevel =  feature.level || category.level;
                 for (let i = 0; i < feature.assets.length; i++) {
                     const asset = feature.assets[i];
                     const order = i % 2 ? -1 : 1;
+                    let assetLevel =  asset.level || feature.level || category.level;
                     pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, assetLevel++ * order, this.defineTintColor(asset.tint, feature.tintColor)));
                 }
             break;
@@ -117,7 +117,7 @@ class PFPFactory {
 
             for (let j = 0; j < matches.length; j++) {
                 const feature = matches[j];
-                feature.tintColor = pseudorandom.pick(this.schema.tints);
+                feature.tintColor = pseudorandom.pick(feature.tints || this.schema.tints);
                 this.addFeature(pfp, feature, category);
             }
         }

@@ -1036,22 +1036,17 @@ const losOsosSchema = {
                     },                    
                 },
                 {
-                    type: PFP.ASSET_OPTIONS,
+                    type: PFP.ASSET_GUAL,
                     name: "Ninja band",
-                    options: [{
-                        type: PFP.ASSET_DUAL,
-                        assets: [ "./assets/eyewear_ninja_band_yellow.png", "./assets/eyewear_ninja_band_back_yellow.png" ],
-                    },{
-                        type: PFP.ASSET_DUAL,
-                        assets: [ "./assets/eyewear_ninja_band_red.png", "./assets/eyewear_ninja_band_back_red.png" ],
-                    },{
-                        type: PFP.ASSET_DUAL,
-                        assets: [ "./assets/eyewear_ninja_band_blue.png", "./assets/eyewear_ninja_band_back_blue.png" ],
-                    },{
-                        type: PFP.ASSET_DUAL,
-                        assets: [ "./assets/eyewear_ninja_band_purple.png", "./assets/eyewear_ninja_band_back_purple.png" ],
-                    }
-                    ]
+                    type: PFP.ASSET_DUAL,
+                    tints: ["#2ec7ff", "#e21100", "#fbe105", "#8102d1"],
+                    assets: [ { 
+                        image: "./assets/eyewear_ninja_band.png",
+                        tint: true,
+                    }, { 
+                        image: "./assets/eyewear_ninja_band_back.png",
+                        tint: true,
+                    } ],
                 },
                 { 
                     name: "Staking sleep mask", 

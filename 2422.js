@@ -4,11 +4,11 @@ const losOsosSchema = {
         height: 1800,
     },
     backgrounds: ["#f0e7d8", "#e1dbc8", "#ebdeca", "#e5d7bf"],
-    tints: ["#3fb033", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc"],
+    tints: ["#3fb033", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc", "#eeeae4"],
     layers: [
         {
             name: "District",
-            level: -1000,
+            level: -999,
             features: [
                 {
                     name: "Blue",   
@@ -207,7 +207,9 @@ const losOsosSchema = {
                     name: "Mecha Bear",
                     type: PFP.ASSET_DUAL,
                     level: 850,
-                    assets: [ "./assets/occupation_mecha_bear.png", "./assets/occupation_mecha_bear.png" ],
+                    assets: [ "./assets/occupation_mecha_bear.png", "./assets/occupation_mecha_bear.png",
+                        { image: "./assets/occupation_mecha_bear_lights.png", tint: true },
+                    ],
                 },
                 { 
                     name: "Singlet",
@@ -282,6 +284,11 @@ const losOsosSchema = {
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
                 },
+                {
+                    name: "Chef's attire",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ "./assets/occupation_chef.png", "./assets/occupation_chef_back.png" ],
+                },
                 { 
                     name: "Developer",
                     type: PFP.ASSET_DUAL,
@@ -321,7 +328,7 @@ const losOsosSchema = {
                     } ]
                 },
                 {
-                    name: "Farmer",
+                    name: "Flowerist",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_farmer1.png", "./assets/occupation_farmer1_back.png" ],
                 },
@@ -356,98 +363,97 @@ const losOsosSchema = {
                     name: "Shirt",
                     type: PFP.ASSET_DUAL,
                     chance: 0.7,
-                    assets: [ {
-                        image: "./assets/occupation_citizen1_for_tinting.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_citizen1_back.png",
-                        tint: true,
-                    },
-                    {
-                        image: "./assets/occupation_citizen1_buttons.png",
-                        tint: false,
-                    }
+                    assets: [ 
+                        { image: "./assets/occupation_citizen1_for_tinting.png", tint: true, }, 
+                        { image: "./assets/occupation_citizen1_back.png", tint: true, },
+                        { image: "./assets/occupation_citizen1_buttons.png", tint: false, }
                     ],
                 },
                 {
                     name: "Banana shirt",
                     type: PFP.ASSET_DUAL,
-                    assets: [ {
-                        image: "./assets/occupation_citizen1_for_tinting.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_citizen1_back.png",
-                        tint: true,
-                    },{
-                        image: "./assets/occupation_citizen1_bananas.png",
-                        tinted: false,
-                    } ],
+                    assets: [ 
+                        { image: "./assets/occupation_citizen1_for_tinting.png", tint: true, }, 
+                        { image: "./assets/occupation_citizen1_back.png", tint: true, },
+                        { image: "./assets/occupation_citizen1_bananas.png", tinted: false, } 
+                    ],
                 },
                 {
                     type: PFP.ASSET_DUAL,
                     chance: 0.9,
                     name: "SMOLSKULLs shirt",
-                    assets: [ {
-                        image: "./assets/occupation_citizen1_for_tinting.png",
-                        tint: true,
-                    }, {
-                        image: "./assets/occupation_citizen1_back.png",
-                        tint: true,
-                    },{
-                        image: "./assets/occupation_citizen1_smolskullz.png",
-                        tinted: false,
-                    } ],
+                    assets: [ 
+                        { image: "./assets/occupation_citizen1_for_tinting.png", tint: true, }, 
+                        { image: "./assets/occupation_citizen1_back.png", tint: true, },
+                        { image: "./assets/occupation_citizen1_smolskullz.png", tinted: false, },
+                    ],
                 },
                 {
-                    name: "ertdfgcvb shirt",
+                    name: "Andreas Gysin shirt",
                     type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_andreasgysin.png" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#111111", }, 
+                        { image: "./assets/occupation_creator_andreasgysin.png" },
+                        "./assets/empty.png",
+                        "./assets/occupation_tshirt_white_lines.png",
+                    ],
                 },
                 {
                     name: "OG with Glomularus",
                     type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_glomularus.png", "./assets/occupation_glomularus_back.png" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#111111", }, 
+                        { image: "./assets/occupation_tshirt_white_lines.png" },
+                        "./assets/occupation_creator_back.png",
+                        "./assets/occupation_glomularus.png",
+                    ],
                 },
                 {
                     name: "Nirvana shirt",
                     type: PFP.ASSET_OPTIONS,
+                    tints: [ "#1f7b99" ],
                     options: [
                         {
                             type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
+                                { image: "./assets/occupation_creator_back.png", tint: "#111111", }, 
+                                "./assets/occupation_creator_nirvana.png", 
+                                "./assets/empty.png", 
+                                "./assets/occupation_tshirt_white_lines.png",
+                            ],
                         },
                         {
                             type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_nirvana.png" ],
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: true, }, 
+                                { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                                "./assets/occupation_creator_nirvana.png",
+                            ],
                         },
                     ]
                 },
                 {
                     name: "Ciphrd shirt",
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_ciphrd_shirt.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_ciphrd_shirt.png" ],
-                        },
+                    type: PFP.ASSET_DUAL,
+                    tints: [ "#eeeae4" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        "./assets/occupation_ciphrd_shirt.png",
                     ]
                 },
                 {
                     name: "Art Basel shirt",
-                    type: PFP.ASSET_OPTIONS,
-                    options: [
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_art_basel.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ "./assets/occupation_tshirt_black_long_sleeve.png", "./assets/occupation_creator_back.png", "./assets/occupation_art_basel.png" ],
-                        },
+                    type: PFP.ASSET_DUAL,
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#111111", }, 
+                        "./assets/occupation_art_basel.png",
+                        "./assets/empty.png", 
+                        "./assets/occupation_tshirt_white_lines.png",
                     ]
                 },
                 {
@@ -456,19 +462,23 @@ const losOsosSchema = {
                     options: [
                         {
                             type: PFP.ASSET_DUAL,
-                            assets: [ { image: "./assets/occupation_tshirt_white.png", tint: true }, "./assets/occupation_creator_back.png" ],
-                        },
-                        {
-                            type: PFP.ASSET_DUAL,
-                            assets: [ { image: "./assets/occupation_tshirt_white_long_sleeve.png", tint: true }, "./assets/occupation_creator_back.png" ],
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: true }, 
+                                { image: "./assets/occupation_creator_back.png", tint: true },
+                            ],
                         },
                     ],
-                    chance: 0.2,
                 },
                 {
                     name: "fx(hash) shirt",
                     type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_fxhash.png" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#090909", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#212121", }, 
+                        { image: "./assets/occupation_creator_fxhash.png" },
+                        "./assets/empty.png",
+                        "./assets/occupation_tshirt_white_lines.png",
+                    ],
                 },
                 {
                     name: "The Hill-side shirt",
@@ -721,6 +731,11 @@ const losOsosSchema = {
                     assets: [ "./assets/headwear_chicken_mask.png", "./assets/headwear_chicken_mask_back.png" ],
                 },
                 { 
+                    name: "Little kitty bow", 
+                    type: PFP.ASSET_FRONT,
+                    assets: [ "./assets/headwear_japanese_cat_bow.png" ],
+                },
+                { 
                     name: "Yayoi Kusama wig", 
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/headwear_yayoi_kusama.png", "./assets/headwear_yayoi_kusama_back.png" ],
@@ -961,6 +976,7 @@ const losOsosSchema = {
             features: [
                 { 
                     name: "Cybear-vision", 
+                    tints: ["#be1b00", "#0b4185", "#288b00", "#fbbf1e", "#43423d", "#5f3368"],
                     assets: [
                         {
                             image: "./assets/eyewear_mecha_bear_color.png",
@@ -1072,12 +1088,15 @@ const losOsosSchema = {
             level: 500,
             features: [
                 { 
-                    name: "Cybear-mouth Towers model", 
+                    name: "Cybear-mouth Towers model",
                     assets: [ {
                         image: "./assets/mouth_mecha_bear_base.png",
                         level: 50,
                     }, {
                         image: "./assets/mouth_mecha_bear.png",
+                    }, {
+                        image: "./assets/mouth_mecha_bear_tubes.png",
+                        tint: ["#be1b00", "#0b4185", "#288b00", "#fbbf1e", "#43423d", "#5f3368"],
                     }],
                 },
                 { 

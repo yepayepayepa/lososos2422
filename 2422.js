@@ -338,7 +338,7 @@ const losOsosSchema = {
                     assets: [ "./assets/occupation_farmer2.png", "./assets/occupation_farmer2_back.png" ],
                 },
                 { 
-                    name: "Inmate", 
+                    name: "(Not a) Criminal", 
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_felon.png", "./assets/occupation_felon_back.png" ],
                     chance: 0.6,
@@ -483,7 +483,13 @@ const losOsosSchema = {
                 {
                     name: "The Hill-side shirt",
                     type: PFP.ASSET_DUAL,
-                    assets: [ "./assets/occupation_tshirt_black.png", "./assets/occupation_creator_back.png", "./assets/occupation_creator_thehillside.png" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#111111", }, 
+                        "./assets/occupation_creator_thehillside.png",
+                        "./assets/empty.png", 
+                        "./assets/occupation_tshirt_white_lines.png",
+                    ]
                 },
                 {
                     name: "wgmi hoodie",
@@ -577,10 +583,11 @@ const losOsosSchema = {
                 { 
                     name: "Backwards hat", 
                     type: PFP.ASSET_DUAL,
+                    tints: [ "#e60d0d", "#46e3ff", "#dd0f66", "#eeede6", "#3fb033", "#f5d10a", "#e1d9a0" ],
                     assets: [ 
                         {
                             image: "./assets/headwear_backwards_hat1.png",
-                            tint: true, 
+                            tint: [ "#e60d0d", "#46e3ff", "#dd0f66", "#eeede6", "#3fb033", "#f5d10a", "#e1d9a0" ],
                         }, 
                         {
                             image: "./assets/headwear_backwards_hat_back.png",
@@ -588,7 +595,7 @@ const losOsosSchema = {
                         },
                         {
                             image: "./assets/headwear_backwards_hat2.png",
-                            tint: true
+                            tint: true,
                         },
                     ],
                 },

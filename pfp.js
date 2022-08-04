@@ -86,7 +86,7 @@ class PFPFactory {
                     const asset = feature.assets[i];
                     const order = i % 2 ? -1 : 1;
                     let assetLevel =  asset.level || feature.level || category.level;
-                    pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, assetLevel++ * order, this.defineTintColor(asset.tint, feature.tintColor)));
+                    pfp.addAsset(new PFPImageAsset(feature.name, asset, this.schema.canvas, (assetLevel + i) * order, this.defineTintColor(asset.tint, feature.tintColor)));
                 }
             break;
 

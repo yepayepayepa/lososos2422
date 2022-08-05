@@ -4,7 +4,7 @@ const losOsosSchema = {
         height: 1800,
     },
     backgrounds: ["#f0e7d8", "#e1dbc8", "#ebdeca", "#e5d7bf"],
-    tints: ["#3fb033", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc", "#eeeae4"],
+    tints: ["#3fb033", "#e60d0d", "#ffc600", "#46e3ff", "#dd0f66", "#9a04fc", "#eeeae4"],
     layers: [
         {
             name: "District",
@@ -206,7 +206,7 @@ const losOsosSchema = {
                 {
                     name: "Cybearpunk",
                     type: PFP.ASSET_DUAL,
-                    level: 850,
+                    level: 550,
                     tints: ["#be1b00", "#2398ca", "#288b00", "#fbbf1e" ],
                     assets: [ 
                         "./assets/occupation_mecha_bear.png",
@@ -426,6 +426,20 @@ const losOsosSchema = {
                 {
                     type: PFP.ASSET_DUAL,
                     chance: 0.9,
+                    name: "Nudoru shirt",
+                    chance: 1000,
+                    tints: [ "#eeeae4", "#bee8f9", "#c1e2b8", "#ffdeca" ],
+                    assets: [ 
+                        { image: "./assets/occupation_citizen1_for_tinting.png", tint: true, }, 
+                        { image: "./assets/occupation_citizen1_back.png", tint: true, },
+                        { image: "./assets/occupation_nudoru_shirt.png", tinted: false, },
+                        "./assets/empty.png",
+                        { image: "./assets/occupation_citizen1_buttons.png", tint: false, }
+                    ],
+                },
+                {
+                    type: PFP.ASSET_DUAL,
+                    chance: 0.9,
                     name: "SMOLSKULLs shirt",
                     assets: [ 
                         { image: "./assets/occupation_citizen1_for_tinting.png", tint: true, }, 
@@ -575,6 +589,7 @@ const losOsosSchema = {
                         image: "./assets/occupation_investor_hoodie_rare.png",
                         tinted: false,
                     } ],
+                    chance: 0.5,
                 },{
                     name: "gm hoodie",
                     type: PFP.ASSET_DUAL,
@@ -741,31 +756,6 @@ const losOsosSchema = {
                             ],
                         }
                     ]
-                },
-                { 
-                    name: "Hand-painted Nudoru hat",
-                    type: PFP.ASSET_DUAL,
-                    assets: [
-                        {
-                            image: "./assets/headwear_hat_cap.png",
-                            tint: ["#cbd8b5", "#f2e8d3"],
-                        },
-                        "./assets/headwear_cap_back.png",
-                        {
-                            image: "./assets/headwear_hat_cap_cover.png",
-                            tint: ["#ed9ff6", "#91dcff", "#f26f7d"],
-                        },
-                        "./assets/empty.png",
-                        {
-                            image: "./assets/headwear_hat_nudoru.png",
-                            tint: false,
-                        },
-                        "./assets/empty.png",
-                        {
-                            image: "./assets/headwear_hat_visor.png",
-                            tint: ["#91dcff", "#f26f7d", "#b1ef63"],
-                        },
-                    ],
                 },
                 { 
                     name: "Beekeeper", 
@@ -1235,6 +1225,11 @@ const losOsosSchema = {
                             tint: true,
                         },
                     ],
+                },
+                {
+                    name: "Wenjimi's ink art",
+                    asset: "./assets/mouth_wenjimi_ink_art.png",
+                    level: 575,
                 },
                 { 
                     name: "Salmon", 

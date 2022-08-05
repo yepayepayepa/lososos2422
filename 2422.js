@@ -204,7 +204,7 @@ const losOsosSchema = {
             level: 200,
             features: [
                 {
-                    name: "Mecha Bear",
+                    name: "Cybearpunk",
                     type: PFP.ASSET_DUAL,
                     level: 850,
                     tints: ["#be1b00", "#2398ca", "#288b00", "#fbbf1e" ],
@@ -434,7 +434,31 @@ const losOsosSchema = {
                     ],
                 },
                 {
-                    name: "Andreas Gysin shirt",
+                    name: "Toxi t-shirt",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#111111" }, 
+                                { image: "./assets/occupation_creator_back.png", tint: "#111111" }, 
+                                { image: "./assets/occupation_toxi.png" },
+                                "./assets/empty.png",
+                                "./assets/occupation_tshirt_white_lines.png",
+                            ],
+                        },
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#06a6e8" }, 
+                                { image: "./assets/occupation_creator_back.png", tint: "#06a6e8" }, 
+                                { image: "./assets/occupation_toxi.png" },
+                            ],
+                        },
+                    ]
+                },
+                {
+                    name: "Andreas Gysin t-shirt",
                     type: PFP.ASSET_DUAL,
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
@@ -526,6 +550,7 @@ const losOsosSchema = {
                 {
                     name: "wgmi hoodie",
                     type: PFP.ASSET_DUAL,
+                    tints: ["#539d4b", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc" ],
                     assets: [ {
                         image: "./assets/occupation_investor_hoodie.png",
                         tint: true,
@@ -539,6 +564,7 @@ const losOsosSchema = {
                 },{
                     name: "Rare hoodie",
                     type: PFP.ASSET_DUAL,
+                    tints: ["#539d4b", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc" ],
                     assets: [ {
                         image: "./assets/occupation_investor_hoodie.png",
                         tint: true,
@@ -552,6 +578,7 @@ const losOsosSchema = {
                 },{
                     name: "gm hoodie",
                     type: PFP.ASSET_DUAL,
+                    tints: ["#539d4b", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc" ],
                     assets: [ {
                         image: "./assets/occupation_investor_hoodie.png",
                         tint: true,
@@ -566,6 +593,7 @@ const losOsosSchema = {
                 {
                     name: "gn hoodie",
                     type: PFP.ASSET_DUAL,
+                    tints: ["#3fb033", "#e60d0d", "#f5d10a", "#46e3ff", "#dd0f66", "#9a04fc" ],
                     assets: [ {
                         image: "./assets/occupation_investor_hoodie.png",
                         tint: true,
@@ -593,11 +621,15 @@ const losOsosSchema = {
             name: "Headwear",
             level: 300,
             features: [
-                // { 
-                //     name: "Cybear-brain", 
-                //     type: PFP.ASSET_FRONT,
-                //     asset: "./assets/headwear_mecha_bear.png",
-                // },
+                { 
+                    name: "Cybearpunk headset", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [
+                        { image: "./assets/headwear_mecha_bear_ear.png", tint: true },
+                        "./assets/headwear_mechabear_back.png",
+                        { image: "./assets/headwear_mecha_bear.png" },
+                    ],
+                },
                 {
                     type: PFP.ASSET_OPTIONS,
                     name: "Luchador mask", 
@@ -652,6 +684,19 @@ const losOsosSchema = {
                             tint: false,
                         },
                     ],
+                },
+                { 
+                    name: "Golf hat",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [
+                                "./assets/headwear_only_golfers.png",
+                                "./assets/headwear_golf_cap_back.png",
+                            ],
+                        }
+                    ]
                 },
                 { 
                     name: "Killed by a Pixel hat",
@@ -1014,8 +1059,8 @@ const losOsosSchema = {
             level: 400,
             features: [
                 { 
-                    name: "Cybear-vision", 
-                    tints: ["#be1b00", "#2398ca", "#288b00", "#fbbf1e", "#43423d", "#5f3368"],
+                    name: "Cybearpunk visor", 
+                    tints: ["#be1b00", "#2398ca", "#288b00", "#fbbf1e", "#5f3368"],
                     assets: [
                         {
                             image: "./assets/eyewear_mecha_bear_color.png",
@@ -1088,7 +1133,7 @@ const losOsosSchema = {
                     asset:  { 
                         image: "./assets/eyewear_space_glasses.png",
                         tint: true,
-                    },                    
+                    },
                 },
                 {
                     type: PFP.ASSET_GUAL,
@@ -1127,7 +1172,7 @@ const losOsosSchema = {
             level: 500,
             features: [
                 { 
-                    name: "Cybear-mouth Towers model",
+                    name: "Cybearpunk Towers mouth",
                     assets: [ {
                         image: "./assets/mouth_mecha_bear_base.png",
                         level: 50,

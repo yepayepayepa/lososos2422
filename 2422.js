@@ -286,6 +286,7 @@ const losOsosSchema = {
                     name: "Yazid's brand",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
+                    chance: 1000,
                 },
                 {
                     name: "Chef's attire",

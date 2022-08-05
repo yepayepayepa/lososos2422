@@ -427,7 +427,6 @@ const losOsosSchema = {
                     type: PFP.ASSET_DUAL,
                     chance: 0.9,
                     name: "Nudoru shirt",
-                    chance: 1000,
                     tints: [ "#eeeae4", "#bee8f9", "#c1e2b8", "#ffdeca" ],
                     assets: [ 
                         { image: "./assets/occupation_citizen1_for_tinting.png", tint: true, }, 

@@ -799,6 +799,25 @@ const losOsosSchema = {
                          ],
                 },
                 {
+                    name: "Magritte's bowler", 
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_FRONT,
+                            assets: [
+                                "./assets/headwear_magritte_bowler.png",
+                            ],
+                        },
+                        {
+                            type: PFP.ASSET_FRONT,
+                            assets: [
+                                "./assets/headwear_magritte_bowler.png",
+                                { image: "./assets/hearwear_magritte_apple.png", level: 580 }
+                            ],
+                        }
+                    ],
+                },
+                {
                     name: "Tupac bandana", 
                     type: PFP.ASSET_DUAL,
                     assets: ["./assets/headwear_tupac_bandana.png", "./assets/headwear_tupac_headband_back.png"],
@@ -1136,7 +1155,7 @@ const losOsosSchema = {
                     },
                 },
                 {
-                    type: PFP.ASSET_GUAL,
+                    type: PFP.ASSET_DUAL,
                     name: "Ninja band",
                     type: PFP.ASSET_DUAL,
                     tints: ["#2ec7ff", "#e21100", "#fbe105", "#8102d1"],
@@ -1186,6 +1205,10 @@ const losOsosSchema = {
                 { 
                     name: "RGB puke", 
                     asset: "./assets/mouth_rgb_puke.png",
+                },
+                { 
+                    name: "Zapata mustache", 
+                    asset: "./assets/mouth_zapata_mustache.png",
                 },
                 { 
                     name: "Tender pass", 

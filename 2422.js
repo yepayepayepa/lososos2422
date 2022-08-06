@@ -215,6 +215,17 @@ const losOsosSchema = {
                     ],
                 },
                 { 
+                    name: "Sabler monk",
+                    type: PFP.ASSET_DUAL,
+                    tints: ["#9f1d1b", "#333333", "#efebe2"],
+                    assets: [
+                        { image: "./assets/occupation_sabler_monk_tint.png", tint: true, }, 
+                        { image: "./assets/occupation_sabler_monk_tint_back.png", tint: true, }, 
+                        { image: "./assets/occupation_sabler_monk.png", tint: false, },
+                        { image: "./assets/occupation_sabler_monk_back.png", tint: false, },
+                    ],
+                },
+                { 
                     name: "Singlet",
                     type: PFP.ASSET_OPTIONS,
                     options: [
@@ -286,7 +297,6 @@ const losOsosSchema = {
                     name: "Yazid's brand",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
-                    chance: 1000,
                 },
                 {
                     name: "Chef's attire",

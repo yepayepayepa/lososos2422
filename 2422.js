@@ -215,7 +215,7 @@ const losOsosSchema = {
                     ],
                 },
                 { 
-                    name: "Sabler monk",
+                    name: "Sabler scarf",
                     type: PFP.ASSET_DUAL,
                     tints: ["#9f1d1b", "#333333", "#efebe2"],
                     assets: [
@@ -223,6 +223,15 @@ const losOsosSchema = {
                         { image: "./assets/occupation_sabler_monk_tint_back.png", tint: true, }, 
                         { image: "./assets/occupation_sabler_monk.png", tint: false, },
                         { image: "./assets/occupation_sabler_monk_back.png", tint: false, },
+                    ],
+                },
+                {
+                    name: "The Hero",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ 
+                        "./assets/occupation_the_hero.png", 
+                        "./assets/occupation_the_hero_back.png",
+                        { image: "./assets/occupation_the_hero_horse.png", level: 900 },
                     ],
                 },
                 { 
@@ -1235,7 +1244,11 @@ const losOsosSchema = {
                     name: "Elote", 
                     asset: "./assets/mouth_elote.png",
                 },
-
+                { 
+                    name: "Goatee", 
+                    asset: "./assets/mouth_goatee.png",
+                    level: 250,
+                },
                 { 
                     name: "Zapata mustache", 
                     asset: "./assets/mouth_zapata_mustache.png",
@@ -1290,7 +1303,7 @@ const losOsosSchema = {
                     ],
                 },
                 {
-                    name: "Wenjimi's ink art",
+                    name: "Jimi Wen's ink art",
                     asset: "./assets/mouth_wenjimi_ink_art.png",
                     level: 575,
                 },

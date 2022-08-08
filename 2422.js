@@ -1232,6 +1232,11 @@ const losOsosSchema = {
                     asset: "./assets/mouth_rgb_puke.png",
                 },
                 { 
+                    name: "Elote", 
+                    asset: "./assets/mouth_elote.png",
+                },
+
+                { 
                     name: "Zapata mustache", 
                     asset: "./assets/mouth_zapata_mustache.png",
                 },

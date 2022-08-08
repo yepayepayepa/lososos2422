@@ -711,18 +711,34 @@ const losOsosSchema = {
                     ],
                 },
                 { 
-                    name: "Golf hat",
+                    name: "Golfer hat",
                     type: PFP.ASSET_OPTIONS,
                     options: [
                         {
                             type: PFP.ASSET_DUAL,
                             assets: [
-                                "./assets/headwear_only_golfers.png",
+                                "./assets/headwear_golf_hat.png",
                                 "./assets/headwear_golf_cap_back.png",
+                                "./assets/headwear_only_golfers.png",
                             ],
                         }
                     ]
                 },
+                { 
+                    name: "fx(hash) hat",
+                    type: PFP.ASSET_OPTIONS,
+                    options: [
+                        {
+                            type: PFP.ASSET_DUAL,
+                            assets: [
+                                "./assets/headwear_golf_hat.png",
+                                "./assets/headwear_golf_cap_back.png",
+                                "./assets/headwear_fxhash.png",
+                            ],
+                        }
+                    ]
+                },
+
                 { 
                     name: "Killed by a Pixel hat",
                     type: PFP.ASSET_OPTIONS,

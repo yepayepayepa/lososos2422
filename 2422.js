@@ -845,6 +845,15 @@ const losOsosSchema = {
                     level: 800,
                 },
                 { 
+                    name: "Marina Abramović's hair", 
+                    type: PFP.ASSET_DUAL,
+                    assets: [ 
+                        "./assets/headwear_marina_hair.png", 
+                        "./assets/headwear_marina_back.png",
+                        { image: "./assets/headwear_marina_hair_top.png", level: 600 },
+                    ],
+                },
+                { 
                     name: "Chicken mask", 
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/headwear_chicken_mask.png", "./assets/headwear_chicken_mask_back.png" ],

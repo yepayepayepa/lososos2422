@@ -313,6 +313,14 @@ const losOsosSchema = {
                     assets: [ "./assets/occupation_chef.png", "./assets/occupation_chef_back.png" ],
                 },
                 { 
+                    name: "Swan dress",
+                    type: PFP.ASSET_DUAL,
+                    assets: [ 
+                        "./assets/ocuppation_swan.png", 
+                        "./assets/ocuppation_swan_back.png" 
+                    ],
+                },
+                { 
                     name: "Developer",
                     type: PFP.ASSET_DUAL,
                     assets: [ "./assets/occupation_creator_engineer.png", "./assets/occupation_creator_engineer_back.png" ]

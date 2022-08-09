@@ -63,7 +63,7 @@ const losOsosSchema = {
                         tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff7800"],
                     }, "./assets/species_gummy_lights.png",
                     ],
-                    chance: 0.2,
+                    chance: 0.35,
                 },
             ]
         },
@@ -1394,14 +1394,16 @@ const losOsosSchema = {
                     chance: 83 
                 },
                 { 
-                    name: "Silver",   
-                    asset: "./assets/bling_silver.png", 
-                    chance: 5 
+                    name: "Silver",
+                    type: "dual",
+                    assets: [ "./assets/bling_silver.png", "./assets/bling_silver_back.png" ], 
+                    chance: 5,
                 },
                 { 
-                    name: "Gold",     
-                    asset: "./assets/bling_gold.png", 
-                    chance: 3 
+                    name: "Gold",
+                    type: "dual",
+                    assets: [ "./assets/bling_gold.png", "./assets/bling_gold_back.png" ], 
+                    chance: 3,
                 },
                 { 
                     name: "Ice",      

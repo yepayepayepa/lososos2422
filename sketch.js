@@ -1,5 +1,6 @@
 import { PFPFactory } from "./pfp.js";
 import losOsosSchema from "./2422.js";
+import pseudorandom from "./pseudorandom.js";
 
 
 window.pfp = {};

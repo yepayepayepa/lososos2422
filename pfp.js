@@ -1,3 +1,5 @@
+import { dimensionless, dimensionlessx, dimensionlessy, dimensionlessCanvas } from "./dimensionless.js";
+
 export class PFPFactory {
     constructor(schema) {
         this.schema = schema;

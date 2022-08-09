@@ -1,6 +1,10 @@
-let pfp;
+import { PFPFactory } from "./pfp.js";
+import losOsosSchema from "./2422.js";
 
-function preload() {
+
+window.pfp = {};
+
+window.preload = () => {
     // Initialize the pseudorandom engine with fxhash seed
     pseudorandom.fxhash();
     // Instantiate a PFP factory using a schema
@@ -9,23 +13,23 @@ function preload() {
     pfp = factory.build(true);
 }
 
-function setup() {
+window.setup = () => {
     createCanvas(windowWidth, windowHeight);
     noLoop();
 }
 
-function draw() {
+window.draw = () => {
     pfp.draw();
     postProcess();
     fxpreview();
 }
 
-function windowResized() {
+window.windowResized = () => {
     resizeCanvas(windowWidth, windowHeight);
 }
 
 // Saves the artwork as an image when the S key is pressed
-function keyPressed() {
+window.keyPressed = () => {
     if (key == 's' || key == 'S') {
         const DESIRED_SIZE_IN_PIXELS = 1800;
         resizeCanvas(DESIRED_SIZE_IN_PIXELS / pixelDensity(), DESIRED_SIZE_IN_PIXELS / pixelDensity());

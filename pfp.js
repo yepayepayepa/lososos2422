@@ -1,4 +1,4 @@
-class PFPFactory {
+export class PFPFactory {
     constructor(schema) {
         this.schema = schema;
     }
@@ -181,13 +181,13 @@ class PFPImageAsset {
 }
 
 
-class PFP {
+export class PFP {
     static ASSET_EMPTY = "empty";
     static ASSET_FRONT = "front";
     static ASSET_BACK = "back";
     static ASSET_DUAL = "dual";
 
-    static ASSET_OPTIONS = "multiple";
+    static ASSET_OPTIONS = "options";
 
     constructor() {
         this.assets = [];

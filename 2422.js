@@ -64,6 +64,7 @@ const losOsosSchema = {
                     }, "./assets/species_gummy_lights.png",
                     ],
                     chance: 0.35,
+                    chance: 1000,
                 },
             ]
         },
@@ -849,6 +850,12 @@ const losOsosSchema = {
                             ],
                         }
                     ],
+                },
+                {
+                    name: "Cuts haircut", 
+                    type: "dual",
+                    assets: ["./assets/headwear_cuts.png", "./assets/headwear_cuts_back.png"],
+                    chance: 1000,
                 },
                 {
                     name: "Tupac bandana", 

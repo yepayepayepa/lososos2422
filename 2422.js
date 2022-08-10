@@ -598,7 +598,6 @@ const losOsosSchema = {
                         { image: "./assets/occupation_creator_back.png", tint: "#0000ff", }, 
                         { image: "./assets/occupation_p1xelfool.png" },
                     ],
-                    chance: 1000,
                 },
                 {
                     name: "Horizontes t-shirt",
@@ -609,6 +608,11 @@ const losOsosSchema = {
                         { image: "./assets/occupation_horizontes.png" },
                         "./assets/empty.png",
                         "./assets/occupation_tshirt_white_lines.png",
+                        "./assets/empty.png",
+
+                        // { image: "./assets/occupation_jacket.png", tint: "#444444" },
+                        // { image: "./assets/occupation_jacket_back.png", tint: "#444444" },
+                        // "./assets/occupation_jacket_zip.png",
                     ],
                 },
                 {
@@ -713,6 +717,7 @@ const losOsosSchema = {
                         { 
                             type: "front",
                             asset: "./assets/eyewear_luchador.png",
+                            chance: 0,
                         },
                         {
                             type: "front",
@@ -888,6 +893,11 @@ const losOsosSchema = {
                     name: "Cuts haircut", 
                     type: "dual",
                     assets: ["./assets/headwear_cuts.png", "./assets/headwear_cuts_back.png"],
+                },
+                {
+                    name: "Kaloh's hair", 
+                    type: "dual",
+                    assets: ["./assets/headwear_kaloh.png", "./assets/headwear_kaloh_back.png"],
                 },
                 {
                     name: "Tupac bandana", 
@@ -1181,6 +1191,10 @@ const losOsosSchema = {
                     asset: "./assets/eyewear_deal_with_it.png",
                 },
                 { 
+                    name: "Kaloh's data analysis glasses", 
+                    asset: "./assets/eyewear_kaloh.png",
+                },
+                { 
                     name: "Fragments of a Wave Glasses", 
                     asset: "./assets/eyewear_fragments.png",
                 },
@@ -1290,7 +1304,7 @@ const losOsosSchema = {
                 { 
                     name: "Tezumie beard", 
                     asset: "./assets/mouth_tezumie_beard.png",
-                    chance: 0.5,
+                    chance: 0,
                     level: 250,
                 },
                 { 

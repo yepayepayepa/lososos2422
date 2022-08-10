@@ -307,6 +307,7 @@ const losOsosSchema = {
                     name: "Yazid's brand",
                     type: "dual",
                     assets: [ "./assets/occupation_creator_yazid.png", "./assets/occupation_creator_yazid_back.png" ],
+                    chance: 0.5,
                 },
                 {
                     name: "Chef's attire",
@@ -571,7 +572,6 @@ const losOsosSchema = {
                     name: "Ciphrd t-shirt",
                     type: "dual",
                     tints: ["#0de9e1" ],
-                    chance: 1000,
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
                         { image: "./assets/occupation_creator_back.png", tint: "#aaaaaa", }, 
@@ -632,7 +632,8 @@ const losOsosSchema = {
                 {
                     name: "Three.js fan",
                     type: "dual",
-                    tints: ["#209e47", "#24459b", "#c80016" ],
+                    chance: 1000,
+                    tints: ["#209e47", "#24459b", "#a01515" ],
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
                         { image: "./assets/occupation_creator_back.png", tint: "#aaaaaa", }, 
@@ -1243,7 +1244,7 @@ const losOsosSchema = {
                 { 
                     name: "Anonymous", 
                     assets: [ "./assets/eyewear_glasses.png", "./assets/eyewear_anonymous.png" ],
-                    chance: 0.7,
+                    chance: 0.4,
                 },
                 { 
                     name: "Sunglasses", 

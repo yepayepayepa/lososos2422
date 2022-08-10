@@ -64,7 +64,7 @@ const losOsosSchema = {
                         tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff7800"],
                     }, "./assets/species_gummy_lights.png",
                     ],
-                    chance: 0.25,
+                    chance: 0.2,
                 },
             ]
         },
@@ -611,6 +611,28 @@ const losOsosSchema = {
                     ]
                 },
                 {
+                    name: "VGA t-shirt",
+                    type: "dual",
+                    chance: 0.5,
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#eeeae4", }, 
+                        { image: "./assets/occupation_vga.png" },
+                    ],
+                },
+                {
+                    name: "Nekropunk t-shirt",
+                    type: "dual",
+                    chance: 0.5,
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#090909", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#212121", }, 
+                        { image: "./assets/occupation_nekropunk.png" },
+                        "./assets/empty.png",
+                        "./assets/occupation_tshirt_white_lines.png",
+                    ],
+                },
+                {
                     name: "fx(hash) t-shirt",
                     type: "dual",
                     assets: [ 
@@ -666,7 +688,6 @@ const losOsosSchema = {
                 {
                     name: "The Hill-side t-shirt",
                     type: "dual",
-                    chance: 1000,
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
                         { image: "./assets/occupation_creator_back.png", tint: "#111111", }, 
@@ -819,6 +840,16 @@ const losOsosSchema = {
                             ],
                         }
                     ]
+                },
+                {
+                    name: "Stoopid DIY mask",
+                    type: "dual",
+                    assets: [
+                        "./assets/headwear_stoopid_mask.png",
+                        "./assets/headwear_stoopid_mask_back.png",
+                    ],
+                    chance: 1000,
+                    level: 850,
                 },
                 {
                     name: "(500) BEARS OF SUMMER hat",
@@ -1489,6 +1520,13 @@ const losOsosSchema = {
                 { 
                     name: "Tongue out", 
                     asset: "./assets/mouth_tongue_out.png",
+                    level: 250,
+                },
+                { 
+                    name: "Minting", 
+                    type: "front",
+                    assets: [ "./assets/mouth_tongue_out.png", "./assets/mouth_mint.png" ],
+                    chance: 1000,
                     level: 250,
                 },
             ],

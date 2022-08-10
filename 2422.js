@@ -600,6 +600,23 @@ const losOsosSchema = {
                     ],
                 },
                 {
+                    name: "Threejs fan",
+                    type: "dual",
+                    tints: ["#209e47", "#24459b", "#c80016" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#aaaaaa", }, 
+                        { image: "./assets/occupation_threejs.png" },
+                        "./assets/empty.png",
+                        "./assets/occupation_tshirt_white_lines.png",
+                        "./assets/empty.png",
+
+                        { image: "./assets/occupation_jacket.png", tint: true },
+                        { image: "./assets/occupation_jacket_back.png", tint: true },
+                        "./assets/occupation_jacket_zip.png",
+                    ],
+                },
+                {
                     name: "Horizontes t-shirt",
                     type: "dual",
                     assets: [ 

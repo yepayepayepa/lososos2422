@@ -570,7 +570,8 @@ const losOsosSchema = {
                 {
                     name: "Ciphrd t-shirt",
                     type: "dual",
-                    tints: ["#444444" ],
+                    tints: ["#0de9e1" ],
+                    chance: 1000,
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
                         { image: "./assets/occupation_creator_back.png", tint: "#aaaaaa", }, 
@@ -824,7 +825,6 @@ const losOsosSchema = {
                         "./assets/headwear_noya_cap.png",
                         "./assets/headwear_cap_back.png",
                     ],
-                    chance: 1000,
                 },
                 { 
                     name: "Killed by a Pixel hat",

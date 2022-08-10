@@ -36,7 +36,7 @@ class DimensionlessCanvas {
   }
 }
 
-export const dimensionlessCanvas = p5.prototype.dimensionlessCanvas = new DimensionlessCanvas(CENTER);
+export const dimensionlessCanvas = new DimensionlessCanvas(CENTER);
 
 /**
  * Transforms a normalized value to its proportional dimension into the canvas.
@@ -44,7 +44,7 @@ export const dimensionlessCanvas = p5.prototype.dimensionlessCanvas = new Dimens
  * @param {number} value the normalized value to be transformed
  * @returns the transformed value  
  */
-export const dimensionless = p5.prototype.dimensionless = (value) => {
+export const dimensionless = (value) => {
   return dimensionlessCanvas.d(value);
 }
 
@@ -53,16 +53,22 @@ export const dimensionless = p5.prototype.dimensionless = (value) => {
  * This function exists so a centered canvas can be rendered taking in count the 
  * shortest side between width and height.
  */
-export const dimensionlessx = p5.prototype.dimensionlessx = (value) => {
+export const dimensionlessx = (value) => {
   return dimensionlessCanvas.x(value);
-}
+};
 
 /**
-* Transforms a normalized value into its proportional y coordinate.
-* This function exists so a centered canvas can be rendered taking in count the 
-* shortest side between width and height.
-*/
-export const dimensionlessy =  p5.prototype.dimensionlessy = (value) => {
+ * Transforms a normalized value into its proportional y coordinate.
+ * This function exists so a centered canvas can be rendered taking in count the 
+ * shortest side between width and height.
+ */
+export const dimensionlessy = (value) => {
   return dimensionlessCanvas.y(value);
 }
 
+if(typeof(p5) !== 'undefined') {
+  p5.prototype.dimensionlessCanvas = dimensionlessCanvas;
+  p5.prototype.dimensionless = dimensionless;
+  p5.prototype.dimensionlessx = dimensionlessx;
+  p5.prototype.dimensionlessy = dimensionlessy;
+}

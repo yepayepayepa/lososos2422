@@ -1,4 +1,6 @@
-import { dimensionless, dimensionlessx, dimensionlessy, dimensionlessCanvas } from "./dimensionless.js";
+import { dimensionless, dimensionlessx, dimensionlessy } from "./dimensionless.js";
+import pseudorandom from "./pseudorandom.js";
+
 
 export class PFPFactory {
     constructor(schema) {
@@ -24,7 +26,9 @@ export class PFPFactory {
 
         if (debug) {
             console.log(JSON.stringify(featurePlan, null, 4));
-            window.$fxhashFeatures = featurePlan;    
+            if(typeof(window) !== "undefined") {
+                window.$fxhashFeatures = featurePlan;
+            }
         }
 
         return featurePlan;

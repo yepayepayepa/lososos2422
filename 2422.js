@@ -546,6 +546,16 @@ const losOsosSchema = {
                     ]
                 },
                 {
+                    name: "Inefable Momento t-shirt",
+                    type: "dual",
+                    tints: [ "#eeeae4" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        "./assets/occupation_inefable_momento.png",
+                    ],
+                },
+                {
                     name: "p5.js fan",
                     type: "dual",
                     tints: [ "#eeeae4" ],
@@ -751,7 +761,6 @@ const losOsosSchema = {
                         { 
                             type: "front",
                             asset: "./assets/eyewear_luchador.png",
-                            chance: 0,
                         },
                         {
                             type: "front",
@@ -1233,6 +1242,10 @@ const losOsosSchema = {
                     asset: "./assets/eyewear_fragments.png",
                 },
                 { 
+                    name: "ykxotkx phantom mask", 
+                    asset: "./assets/eyewear_ykxotkx_mask.png",
+                },
+                { 
                     name: "Aviator glasses", 
                     asset: "./assets/eyewear_aviator_glasses.png",
                 },
@@ -1338,7 +1351,6 @@ const losOsosSchema = {
                 { 
                     name: "Tezumie beard", 
                     asset: "./assets/mouth_tezumie_beard.png",
-                    chance: 0,
                     level: 250,
                 },
                 { 

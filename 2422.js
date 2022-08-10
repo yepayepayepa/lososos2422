@@ -287,6 +287,7 @@ const losOsosSchema = {
                     name: "Metabears United player",
                     type: "dual",
                     assets: [ "./assets/occupation_mufc.png", "./assets/occupation_mufc_back.png" ],
+                    chance: 0.4,
                 },
                 {
                     name: "William Mapan hoodie",
@@ -632,7 +633,6 @@ const losOsosSchema = {
                 {
                     name: "Three.js fan",
                     type: "dual",
-                    chance: 1000,
                     tints: ["#209e47", "#24459b", "#a01515" ],
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
@@ -666,6 +666,7 @@ const losOsosSchema = {
                 {
                     name: "The Hill-side t-shirt",
                     type: "dual",
+                    chance: 1000,
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: "#111111", }, 
                         { image: "./assets/occupation_creator_back.png", tint: "#111111", }, 
@@ -1419,6 +1420,7 @@ const losOsosSchema = {
                     name: "Jimi Wen's ink art",
                     asset: "./assets/mouth_wenjimi_ink_art.png",
                     level: 575,
+                    chance: 0.5,
                 },
                 { 
                     name: "Salmon", 

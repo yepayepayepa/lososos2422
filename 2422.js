@@ -546,14 +546,31 @@ const losOsosSchema = {
                     ]
                 },
                 {
-                    name: "Ciphrd t-shirt",
+                    name: "p5.js fan",
                     type: "dual",
                     tints: [ "#eeeae4" ],
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: true, },
                         { image: "./assets/occupation_creator_back.png", tint: true, }, 
-                        "./assets/occupation_ciphrd_shirt.png",
-                    ]
+                        "./assets/occupation_p5js.png",
+                    ],
+                },
+                {
+                    name: "Ciphrd t-shirt",
+                    type: "dual",
+                    tints: ["#444444" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#aaaaaa", }, 
+                        { image: "./assets/occupation_ciphrd_shirt.png" },
+                        "./assets/empty.png",
+                        "./assets/occupation_tshirt_white_lines.png",
+                        "./assets/empty.png",
+
+                        { image: "./assets/occupation_jacket.png", tint: true },
+                        { image: "./assets/occupation_jacket_back.png", tint: true },
+                        "./assets/occupation_jacket_zip.png",
+                    ],
                 },
                 {
                     name: "Picasso",
@@ -600,7 +617,7 @@ const losOsosSchema = {
                     ],
                 },
                 {
-                    name: "Threejs fan",
+                    name: "Three.js fan",
                     type: "dual",
                     tints: ["#209e47", "#24459b", "#c80016" ],
                     assets: [ 

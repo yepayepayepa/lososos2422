@@ -556,6 +556,19 @@ const losOsosSchema = {
                     ]
                 },
                 {
+                    name: "Picasso",
+                    type: "dual",
+                    tints: [ "#eeeae4" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        "./assets/occupation_picasso.png",
+                        "./assets/empty.png",
+                        { image: "./assets/occupation_picasso_lights.png", level: 900, }, 
+
+                    ],
+                },
+                {
                     name: "Art Basel t-shirt",
                     type: "dual",
                     assets: [ 
@@ -573,6 +586,27 @@ const losOsosSchema = {
                         { image: "./assets/occupation_tshirt_white.png", tint: "#090909", }, 
                         { image: "./assets/occupation_creator_back.png", tint: "#212121", }, 
                         { image: "./assets/occupation_creator_fxhash.png" },
+                        "./assets/empty.png",
+                        "./assets/occupation_tshirt_white_lines.png",
+                    ],
+                },
+                {
+                    name: "P1xelfool t-shirt",
+                    type: "dual",
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#0a31da", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#0000ff", }, 
+                        { image: "./assets/occupation_p1xelfool.png" },
+                    ],
+                    chance: 1000,
+                },
+                {
+                    name: "Horizontes t-shirt",
+                    type: "dual",
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: "#090909", }, 
+                        { image: "./assets/occupation_creator_back.png", tint: "#49c06e", }, 
+                        { image: "./assets/occupation_horizontes.png" },
                         "./assets/empty.png",
                         "./assets/occupation_tshirt_white_lines.png",
                     ],
@@ -1254,6 +1288,12 @@ const losOsosSchema = {
                     asset: "./assets/mouth_rgb_puke.png",
                 },
                 { 
+                    name: "Tezumie beard", 
+                    asset: "./assets/mouth_tezumie_beard.png",
+                    chance: 0.5,
+                    level: 250,
+                },
+                { 
                     name: "Elote", 
                     asset: "./assets/mouth_elote.png",
                 },
@@ -1265,6 +1305,14 @@ const losOsosSchema = {
                 { 
                     name: "Zapata mustache", 
                     asset: "./assets/mouth_zapata_mustache.png",
+                },
+                { 
+                    name: "Tezzardz gold medal", 
+                    type: "front",
+                    assets: [ 
+                        "./assets/mouth_tezzards_medal.png", 
+                        { image: "./assets/mouth_tezzards_medal_back.png", level: -50 },
+                    ],
                 },
                 { 
                     name: "Tender pass", 

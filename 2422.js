@@ -33,6 +33,7 @@ const losOsosSchema = {
                 {
                     name: "Black",   
                     asset: "./assets/district_black.png",
+                    chance: 0.8,
                 },
             ]
         },
@@ -63,7 +64,7 @@ const losOsosSchema = {
                         tint: ["#ff0000", "#FFFF00", "#00ec00", "#ff7800"],
                     }, "./assets/species_gummy_lights.png",
                     ],
-                    chance: 0.35,
+                    chance: 0.25,
                 },
             ]
         },
@@ -319,6 +320,7 @@ const losOsosSchema = {
                         "./assets/ocuppation_swan.png", 
                         "./assets/ocuppation_swan_back.png" 
                     ],
+                    chance: 0.15,
                 },
                 { 
                     name: "Developer",
@@ -372,7 +374,7 @@ const losOsosSchema = {
                     name: "(Not a) Criminal", 
                     type: "dual",
                     assets: [ "./assets/occupation_felon.png", "./assets/occupation_felon_back.png" ],
-                    chance: 0.6,
+                    chance: 0.4,
                 },
                 {   
                     name: "Nordic fisher",
@@ -787,28 +789,6 @@ const losOsosSchema = {
                         },
                     ],
                 },
-
-                { 
-                    name: "Noya hat",
-                    type: "dual",
-                    chance: 0,
-                    assets: [
-                        {
-                            image: "./assets/headwear_hat_cap.png",
-                            tint: true,
-                        },
-                        "./assets/headwear_cap_back.png",
-                        {
-                            image: "./assets/headwear_hat_visor.png",
-                            tint: true,
-                        },
-                        "./assets/empty.png",
-                        {
-                            image: "./assets/headwear_hat_noya.png",
-                            tint: false,
-                        },
-                    ],
-                },
                 { 
                     name: "Golfer hat",
                     type: "options",
@@ -837,7 +817,15 @@ const losOsosSchema = {
                         }
                     ]
                 },
-
+                {
+                    name: "(500) BEARS OF SUMMER hat",
+                    type: "dual",
+                    assets: [
+                        "./assets/headwear_noya_cap.png",
+                        "./assets/headwear_cap_back.png",
+                    ],
+                    chance: 1000,
+                },
                 { 
                     name: "Killed by a Pixel hat",
                     type: "options",
@@ -966,6 +954,7 @@ const losOsosSchema = {
                     name: "Chicken mask", 
                     type: "dual",
                     assets: [ "./assets/headwear_chicken_mask.png", "./assets/headwear_chicken_mask_back.png" ],
+                    chance: 0.5,
                 },
                 { 
                     name: "Little kitty bow", 
@@ -1007,11 +996,13 @@ const losOsosSchema = {
                     name: "RIGHT CLICK SAVE headband", 
                     type: "dual",
                     assets: ["./assets/headwear_rcs.png", "./assets/headwear_headband_back.png" ],
+                    chance: 0.5,
                 },
                 {
                     name: "RIGHT CLICK SAVE Artnome headband", 
                     type: "dual",
                     assets: [ "./assets/headwear_rcs.png", "./assets/headwear_artnome_back.png" ],
+                    chance: 0.5,
                 },
                 {
                     name: "ClubNFT headband", 
@@ -1096,8 +1087,8 @@ const losOsosSchema = {
                     asset: "./assets/headwear_party_hat.png",
                 },
                 { 
+                    name: "Chullo", 
                     type: "dual",
-                    name: "Inka hat", 
                     assets: [ 
                         {
                             image: "./assets/headwear_inka_hat.png",
@@ -1479,11 +1470,13 @@ const losOsosSchema = {
                     name: "Gold tooth smile", 
                     asset: "./assets/mouth_gold_tooth.png",
                     level: 250,
+                    chance: 0.3,
                 },
                 { 
                     name: "Meh", 
                     asset: "./assets/mouth_ok.png",
                     level: 250,
+                    chance: 0.3,
                 },
                 { 
                     name: "Smile", 

@@ -284,6 +284,17 @@ const losOsosSchema = {
                     ] 
                 },
                 {
+                    name: "WTBS Olympic Games jacket",
+                    type: "dual",
+                    assets: [ 
+                        "./assets/occupation_wtbs.png",
+                        { image: "./assets/occupation_sports_jacket_back.png", tint: "#7c4b85"},
+                        "./assets/decoro_ipod.png", 
+                        "./assets/decoro_ipod_back.png",
+                        "./assets/occupation_wtbs_screen.png", 
+                    ],
+                },
+                {
                     name: "Bearstappen",
                     type: "dual",
                     assets: [ "./assets/occupation_racer.png", "./assets/occupation_racer_back.png" ],
@@ -548,6 +559,7 @@ const losOsosSchema = {
                         { image: "./assets/occupation_creator_back.png", tint: true, }, 
                         "./assets/occupation_p5js.png",
                     ],
+                    chance: 1000,
                 },
                 {
                     name: "Santiago's PSA t-shirt",
@@ -992,7 +1004,7 @@ const losOsosSchema = {
                     chance: 0.5,
                 },
                 { 
-                    name: "Little kitty bow", 
+                    name: "Kitty bow", 
                     type: "front",
                     assets: [ "./assets/headwear_japanese_cat_bow.png" ],
                 },
@@ -1357,6 +1369,13 @@ const losOsosSchema = {
                     name: "Monocle", 
                     type: "dual",
                     assets: [ "./assets/eyewear_monocle.png", "./assets/eyewear_monocle_back.png" ],
+                },
+                { 
+                    name: "Eye patch", 
+                    type: "dual",
+                    assets: [ "./assets/eyewear_patch.png", "./assets/eyewear_patch_back.png" ],
+                    level: 255,
+                    chance: 1000,
                 },
             ],
         },

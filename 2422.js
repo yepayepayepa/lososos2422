@@ -381,7 +381,7 @@ const losOsosSchema = {
                     } ]
                 },
                 {
-                    name: "Flowerist",
+                    name: "Loneli flowerist",
                     type: "dual",
                     assets: [ "./assets/occupation_farmer1.png", "./assets/occupation_farmer1_back.png" ],
                 },
@@ -391,7 +391,7 @@ const losOsosSchema = {
                     assets: [ "./assets/occupation_farmer2.png", "./assets/occupation_farmer2_back.png" ],
                 },
                 { 
-                    name: "(Not a) Criminal", 
+                    name: "(Not a) criminal", 
                     type: "dual",
                     assets: [ "./assets/occupation_felon.png", "./assets/occupation_felon_back.png" ],
                     chance: 0.4,
@@ -556,8 +556,18 @@ const losOsosSchema = {
                     chance: 0.6,
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: true, },
-                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        { image: "./assets/decoro_ipod_back.png" },
+                        
                         "./assets/occupation_p5js.png",
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        
+                        "./assets/decoro_ipod_strap.png", 
+                        "./assets/empty.png",
+                        "./assets/decoro_ipod.png", 
+                        "./assets/empty.png",
+
+                        "./assets/occupation_wtbs_screen.png", 
+
                     ],
                     chance: 1000,
                 },
@@ -798,6 +808,7 @@ const losOsosSchema = {
                             asset: "./assets/eyewear_nftbiker.png",
                         },
                     ],
+                    level: 290,
                 },
                 { 
                     name: "Backwards hat", 
@@ -1287,7 +1298,7 @@ const losOsosSchema = {
                         "./assets/eyewear_ykxotkx_mask_cover.png",
                     ],
                     chance: 0.2,
-                    level: 255,
+                    level: 295,
                 },
                 { 
                     name: "Aviator glasses", 
@@ -1374,8 +1385,7 @@ const losOsosSchema = {
                     name: "Eye patch", 
                     type: "dual",
                     assets: [ "./assets/eyewear_patch.png", "./assets/eyewear_patch_back.png" ],
-                    level: 255,
-                    chance: 1000,
+                    level: 295,
                 },
             ],
         },
@@ -1537,6 +1547,14 @@ const losOsosSchema = {
                     name: "Artnome beard", 
                     asset: "./assets/mouth_artnome.png",
                     level: 250,
+                },
+                { 
+                    name: "Rev Dan Cat's beard", 
+                    type: "front",
+                    assets: [
+                        { image: "./assets/mouth_rev_beard.png", level: 250 },
+                        "./assets/mouth_rev_beard_pen.png", 
+                    ],
                 },
                 { 
                     name: "Gold tooth smile", 

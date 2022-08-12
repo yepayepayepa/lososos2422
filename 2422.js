@@ -611,6 +611,8 @@ const losOsosSchema = {
                         { image: "./assets/occupation_tshirt_white.png", tint: true, },
                         { image: "./assets/occupation_creator_back.png", tint: true, }, 
                         "./assets/occupation_inefable_momento.png",
+                        "./assets/empty.png",
+                        "./assets/occupation_inefable_vest.png",
                     ],
                     chance: 0.7,
                 },
@@ -650,7 +652,7 @@ const losOsosSchema = {
                 },
                 {
                     name: "Sound Check audio t-shirt",
-                    tints: [ "#3dfb72", "#58dbbb", "#f000b3", "#28c1d1", "#f0fd38" ],
+                    tints: [ "#3dfb72", "#58dbbb", "#f000b3", "#28c1d1", "#f0fd38", "#f0576e" ],
                     type: "dual",
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: true, },
@@ -662,7 +664,7 @@ const losOsosSchema = {
                         { image: "./assets/occupation_sound_check2.png", tint: [ "#be001e", "#fff600", "#3dfb72" ], },
                         "./assets/empty.png",
 
-                        { image: "./assets/occupation_sound_check3.png", tint: [ "#be001e", "#fff600", "#3dfb72" ], },
+                        { image: "./assets/occupation_sound_check3.png", tint: [ "#be001e", "#fff600", "#3dfb72", "#3bf4f9" ], },
                         "./assets/empty.png",
                         
                         "./assets/decoro_headphones.png", 
@@ -1627,6 +1629,11 @@ const losOsosSchema = {
                 { 
                     name: "Bamboo", 
                     asset: "./assets/mouth_bamboo.png",
+                },
+                { 
+                    name: "Rudxane's Bingo card", 
+                    asset: "./assets/mouth_bingo_card.png",
+                    chance: 1000,
                 },
                 { 
                     name: "Snorkel", 

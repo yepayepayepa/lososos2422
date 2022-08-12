@@ -552,6 +552,17 @@ const losOsosSchema = {
                     chance: 0.7,
                 },
                 {
+                    name: "Returns t-shirt",
+                    type: "dual",
+                    tints: [ "#ffffff" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        "./assets/occupation_returns.png",
+                    ],
+                    chance: 0.7,
+                },
+                {
                     name: "Inefable Momento t-shirt",
                     type: "dual",
                     tints: [ "#e0dbd5" ],

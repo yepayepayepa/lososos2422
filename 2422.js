@@ -765,6 +765,32 @@ const losOsosSchema = {
                     ],
                 },
                 {
+                    name: "Tender t-shirt",
+                    type: "options",
+                    options: [
+                        {
+                            type: "dual",
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#eeeae4", }, 
+                                { image: "./assets/occupation_creator_back.png", tint: "#eeeae4", }, 
+                                { image: "./assets/occupation_tender.png", tint: "#333333", }, 
+                                "./assets/empty.png",
+                                "./assets/occupation_tshirt_white_lines.png",
+                            ],
+                        },
+                        {
+                            type: "dual",
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#090909", }, 
+                                { image: "./assets/occupation_creator_back.png", tint: "#212121", }, 
+                                { image: "./assets/occupation_tender.png", tint: "#eeeae4", }, 
+                                "./assets/empty.png",
+                                "./assets/occupation_tshirt_white_lines.png",
+                            ],
+                        },
+                    ],
+                },
+                {
                     name: "P1xelfool t-shirt",
                     type: "dual",
                     assets: [ 
@@ -1692,6 +1718,7 @@ const losOsosSchema = {
                         { image: "./assets/mouth_rev_beard.png", level: 250 },
                         "./assets/mouth_rev_beard_pen.png", 
                     ],
+                    chance: 0.8,
                 },
                 { 
                     name: "Gold tooth smile", 
@@ -1719,6 +1746,7 @@ const losOsosSchema = {
                     name: "Minting", 
                     type: "front",
                     assets: [ "./assets/mouth_tongue_out.png", "./assets/mouth_mint.png" ],
+                    chance: 0.5,
                 },
             ],
         },

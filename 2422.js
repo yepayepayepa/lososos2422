@@ -563,6 +563,50 @@ const losOsosSchema = {
                     chance: 0.7,
                 },
                 {
+                    name: "The Paper Crane t-shirt",
+                    type: "dual",
+                    tints: [ "#fe5a00" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        "./assets/occupation_thepapercrane.png",
+                    ],
+                    chance: 0.7,
+                },
+                {
+                    name: "Miniscapes t-shirt",
+                    type: "options",
+                    options: [
+                        {
+                            type: "dual",
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#3c8685", },
+                                { image: "./assets/occupation_creator_back.png", tint: "#3c8685", }, 
+                                "./assets/occupation_miniscapes1.png",
+                            ],
+                            chance: 0.7,
+                        },
+                        {
+                            type: "dual",
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#7e728c", },
+                                { image: "./assets/occupation_creator_back.png", tint: "#7e728c", }, 
+                                "./assets/occupation_miniscapes2.png",
+                            ],
+                            chance: 0.7,
+                        },
+                        {
+                            type: "dual",
+                            assets: [ 
+                                { image: "./assets/occupation_tshirt_white.png", tint: "#ab7659", },
+                                { image: "./assets/occupation_creator_back.png", tint: "#ab7659", }, 
+                                "./assets/occupation_miniscapes3.png",
+                            ],
+                            chance: 0.7,
+                        },
+                    ]
+                },
+                {
                     name: "Inefable Momento t-shirt",
                     type: "dual",
                     tints: [ "#e0dbd5" ],

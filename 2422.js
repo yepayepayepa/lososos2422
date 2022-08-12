@@ -810,18 +810,15 @@ const losOsosSchema = {
                     ],
                 },
                 {
-                    type: "options",
-                    name: "Luchador mask", 
-                    options: [
-                        { 
-                            type: "front",
-                            asset: "./assets/eyewear_luchador.png",
-                        },
-                        {
-                            type: "front",
-                            asset: "./assets/eyewear_nftbiker.png",
-                        },
-                    ],
+                    name: "El Santo mask", 
+                    type: "front",
+                    asset: "./assets/headwear_el_santo.png",
+                    level: 290,
+                },
+                {
+                    name: "NFT Biker luchador mask", 
+                    type: "front",
+                    asset: "./assets/eyewear_nftbiker.png",
                     level: 290,
                 },
                 { 
@@ -1526,12 +1523,10 @@ const losOsosSchema = {
                 { 
                     name: "Hmmmm", 
                     asset: "./assets/mouth_confused.png",
-                    level: 250,
                 },
                 { 
                     name: "Surprised", 
                     asset: "./assets/mouth_surprised.png",
-                    level: 250,
                 },
                 { 
                     name: "Freddie Mercury mustache", 
@@ -1550,7 +1545,6 @@ const losOsosSchema = {
                 { 
                     name: "Lollipop", 
                     asset: "./assets/mouth_lollipop.png",
-                    level: 250,
                 },
                 { 
                     name: "Eating berries", 
@@ -1577,7 +1571,7 @@ const losOsosSchema = {
                     chance: 0.3,
                 },
                 { 
-                    name: "Meh", 
+                    name: "Serious", 
                     asset: "./assets/mouth_ok.png",
                     level: 250,
                     chance: 0.3,
@@ -1596,7 +1590,6 @@ const losOsosSchema = {
                     name: "Minting", 
                     type: "front",
                     assets: [ "./assets/mouth_tongue_out.png", "./assets/mouth_mint.png" ],
-                    level: 250,
                 },
             ],
         },

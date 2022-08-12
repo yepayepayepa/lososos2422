@@ -289,8 +289,10 @@ const losOsosSchema = {
                     assets: [ 
                         "./assets/occupation_wtbs.png",
                         { image: "./assets/occupation_sports_jacket_back.png", tint: "#7c4b85"},
+                        "./assets/decoro_headphones.png", 
+                        "./assets/decoro_headphones_back.png",
                         "./assets/decoro_ipod.png", 
-                        "./assets/decoro_ipod_back.png",
+                        "./assets/empty.png",
                         "./assets/occupation_wtbs_screen.png", 
                     ],
                 },
@@ -551,25 +553,37 @@ const losOsosSchema = {
                 },
                 {
                     name: "p5.js fan",
-                    type: "dual",
                     tints: [ "#eeeae4" ],
-                    chance: 0.6,
+                    type: "dual",
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: true, },
-                        { image: "./assets/decoro_ipod_back.png" },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        "./assets/occupation_p5js.png",        
+                    ],      
+                    chance: 0.3  
+                },
+                {
+                    name: "The Coding Train and p5.js fan",
+                    tints: [ "#eeeae4" ],
+                    type: "dual",
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/decoro_headphones_back.png" },
                         
                         "./assets/occupation_p5js.png",
                         { image: "./assets/occupation_creator_back.png", tint: true, }, 
                         
                         "./assets/decoro_ipod_strap.png", 
                         "./assets/empty.png",
+                        "./assets/decoro_headphones.png", 
+                        "./assets/empty.png",
                         "./assets/decoro_ipod.png", 
                         "./assets/empty.png",
 
-                        "./assets/occupation_wtbs_screen.png", 
+                        "./assets/decoro_coding_train_screen.png", 
 
                     ],
-                    chance: 1000,
+                    chance: 0.7,
                 },
                 {
                     name: "Santiago's PSA t-shirt",
@@ -1382,7 +1396,7 @@ const losOsosSchema = {
                     assets: [ "./assets/eyewear_monocle.png", "./assets/eyewear_monocle_back.png" ],
                 },
                 { 
-                    name: "Eye patch", 
+                    name: "SMOLSKULL-PATTERN eyepatch", 
                     type: "dual",
                     assets: [ "./assets/eyewear_patch.png", "./assets/eyewear_patch_back.png" ],
                     level: 295,
@@ -1549,7 +1563,7 @@ const losOsosSchema = {
                     level: 250,
                 },
                 { 
-                    name: "Rev Dan Cat's beard", 
+                    name: "Rev Dan Catt's beard", 
                     type: "front",
                     assets: [
                         { image: "./assets/mouth_rev_beard.png", level: 250 },

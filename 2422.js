@@ -1633,7 +1633,7 @@ const losOsosSchema = {
                 { 
                     name: "Rudxane's Bingo card", 
                     asset: "./assets/mouth_bingo_card.png",
-                    chance: 1000,
+                    chance: 0.6,
                 },
                 { 
                     name: "Snorkel", 

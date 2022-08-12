@@ -541,9 +541,20 @@ const losOsosSchema = {
                     ]
                 },
                 {
+                    name: "Off-White Fidenza t-shirt",
+                    type: "dual",
+                    tints: [ "#ffffff" ],
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+                        "./assets/occupation_off_white_fidenza.png",
+                    ],
+                    chance: 0.7,
+                },
+                {
                     name: "Inefable Momento t-shirt",
                     type: "dual",
-                    tints: [ "#eeeae4" ],
+                    tints: [ "#e0dbd5" ],
                     assets: [ 
                         { image: "./assets/occupation_tshirt_white.png", tint: true, },
                         { image: "./assets/occupation_creator_back.png", tint: true, }, 

@@ -810,9 +810,15 @@ const losOsosSchema = {
                     ],
                 },
                 {
-                    name: "El Santo mask", 
+                    name: "El Santo luchador mask", 
                     type: "front",
                     asset: "./assets/headwear_el_santo.png",
+                    level: 290,
+                },
+                {
+                    name: "Blue Demon luchador mask", 
+                    type: "front",
+                    asset: "./assets/headwear_blue_demon.png",
                     level: 290,
                 },
                 {

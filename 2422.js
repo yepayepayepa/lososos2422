@@ -629,7 +629,7 @@ const losOsosSchema = {
                     chance: 0.3  
                 },
                 {
-                    name: "The Coding Train and p5.js fan",
+                    name: "The Coding Train / p5.js fan",
                     tints: [ "#eeeae4" ],
                     type: "dual",
                     assets: [ 
@@ -650,6 +650,29 @@ const losOsosSchema = {
 
                     ],
                     chance: 0.7,
+                },
+                {
+                    name: "Sound Check audio t-shirt",
+                    tints: [ "#d0fa60", "#3dfb72", "#58dbbb", "#adb326", "#f000b3", "#28c1d1", "#f0fd38" ],
+                    type: "dual",
+                    assets: [ 
+                        { image: "./assets/occupation_tshirt_white.png", tint: true, },
+                        { image: "./assets/decoro_headphones_back.png" },
+                        
+                        { image: "./assets/occupation_sound_check1.png", tint: [ "#be001e", "#fff600", "#3dfb72" ], },
+                        { image: "./assets/occupation_creator_back.png", tint: true, }, 
+
+                        { image: "./assets/occupation_sound_check2.png", tint: [ "#be001e", "#fff600", "#3dfb72" ], },
+                        "./assets/empty.png",
+
+                        { image: "./assets/occupation_sound_check3.png", tint: [ "#be001e", "#fff600", "#3dfb72" ], },
+                        "./assets/empty.png",
+                        
+                        "./assets/decoro_headphones.png", 
+                        "./assets/empty.png",
+                    ],
+                    chance: 0.7,
+                    chance: 1000,
                 },
                 {
                     name: "Santiago's PSA t-shirt",
@@ -965,6 +988,14 @@ const losOsosSchema = {
                     assets: [
                         "./assets/headwear_noya_cap.png",
                         "./assets/headwear_cap_back.png",
+                    ],
+                },
+                {
+                    name: "pico_punk mohawk",
+                    type: "dual",
+                    assets: [
+                        "./assets/headwear_pico_punk.png",
+                        "./assets/headwear_pico_punk_back.png",
                     ],
                 },
                 { 
